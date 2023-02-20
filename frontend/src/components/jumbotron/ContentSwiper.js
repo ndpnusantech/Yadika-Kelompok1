@@ -6,7 +6,7 @@ const ContentSwiper = (props) => {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundImage: `url('${props.imgUrl}')`,
-    backgroundPosition: "center",
+    backgroundPosition: "0 -110px",
     color: "white",
     padding: "100px 150px",
   };
