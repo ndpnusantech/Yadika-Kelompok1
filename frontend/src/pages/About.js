@@ -1,21 +1,18 @@
 import React from "react";
 import Container from "react-bootstrap/esm/Container";
-import HomeJumbotron from "../components/jumbotron/HomeJumbotron";
+import AboutJumbotron from "../components/jumbotron/AboutJumbotron";
 import Footer from "../components/layouts/Footer";
 import NavigationBar from "../components/layouts/NavigationBar";
 import ListMovie from "../components/ListMovie/ListMovie";
-import OurPartner from "../components/OurPartner";
 
-const Home = () => {
+const About = () => {
   return (
-    <div className="home">
+    <div className="about text-white">
       <NavigationBar />
-      <HomeJumbotron />
+      <AboutJumbotron />
       <Container>
         <center>
-          <ListMovie titleList="Now Showing In Cinema" />
-          <ListMovie titleList="Popular" />
-          <OurPartner />
+          <ListMovie titleList="Other Movie" />
         </center>
       </Container>
       <Footer />
@@ -23,4 +20,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default About;

@@ -11,6 +11,7 @@ import "./listMovie.css";
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import { dataMovie } from "../../data/dataMovie";
+import { Link } from "react-router-dom";
 
 const ListMovie = (props) => {
   return (
@@ -32,10 +33,12 @@ const ListMovie = (props) => {
       >
         {dataMovie.map((data) => (
           <SwiperSlide id={data.id}>
-            <div id={data.id}>
-              <img src={`${data.poster}`} alt="" />
-              <h5>{data.title}</h5>
-            </div>
+            <Link to={"/about"}>
+              <div id={data.id}>
+                <img src={`${data.poster}`} alt="" />
+                <h5>{data.title}</h5>
+              </div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

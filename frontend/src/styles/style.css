@@ -7,4 +7,9 @@ body {
 
 a {
   text-decoration: none !important;
+  color: white;
+}
+
+a:hover {
+  color: rgb(221, 221, 221);
 }

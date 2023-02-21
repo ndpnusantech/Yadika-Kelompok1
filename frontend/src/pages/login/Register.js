@@ -1,26 +1,41 @@
 import React from "react";
-import './style/register.css'
+import { Link } from "react-router-dom";
+import "./login.css";
 
-const Register = () =>{
-    return(
-        <div class='card'>
-            <div class='page-1'>
-                <img src='./images/cinema.png' class='cinema'></img>
-                <h1>Boking your ticket to <br/>
-                     watch your favorite  <br/>
-                            movie
-                </h1>
-            </div>
-            <div class='page-2'>
-                <input type='usename' placeholder='Username' class='username' /> <br />
-                <input type='email' placeholder='Email' class='email' /> <br />
-                <input type='password' placeholder='Password' class='password' /> <br/>
-                <input type='password' placeholder='Password' class='password' /> <br/>
-                <button type='submit'>Register</button>
-                <p>Already have an account ? <a href=''>Login Now</a></p>
-            </div>
+const Register = () => {
+  return (
+    <center>
+      <div class="register d-flex" style={{ height: "100vh" }}>
+        <div class="w-50" style={{ background: "#C44D4D" }}>
+          <img
+            src="./images/icon/cinema.png"
+            alt=""
+            style={{
+              width: "250px",
+              marginTop: "100px",
+            }}
+          />
+          <h3 className="text-white text-center mt-5 w-50">
+            Boking your ticket to watch your favorite movie
+          </h3>
         </div>
-    )
-}
+        <div className="input w-50 d-flex flex-column text-white">
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <input type="password" placeholder="Password" />
+          <button className="btn text-white rounded-2 p-2 my-4" type="submit">
+            Login
+          </button>
+          <p>
+            Already have an account
+            <Link to={"/login"} className="text-primary ms-2">
+              Login Now
+            </Link>
+          </p>
+        </div>
+      </div>
+    </center>
+  );
+};
 
-export default Register
+export default Register;

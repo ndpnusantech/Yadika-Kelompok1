@@ -15,12 +15,12 @@ const NavigationBar = () => {
           <img src="./images/logo/logo-cinema.png" alt="" />
         </Navbar.Brand>
         <Nav className="ms-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="#features">Now Playing</Nav.Link>
           <Nav.Link href="#pricing" style={{ marginRight: "100px" }}>
             History
           </Nav.Link>
-          <Nav.Link href="#pricing" style={{ fontWeight: "bold" }}>
+          <Nav.Link href="/login" style={{ fontWeight: "bold" }}>
             Login <img src="./images/icon/enter.png" alt="" />
           </Nav.Link>
         </Nav>

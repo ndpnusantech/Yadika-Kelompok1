@@ -1,76 +1,30 @@
-body{
-    background-color: grey;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap");
+
+.login .input,
+.register .input {
+  padding: 200px 150px;
 }
 
- .card{
-   display: flex;
-} 
-
-.page-1{
-    background-color: #C44D4D;
-    width: 404px;
-    height: 500px;
-    margin-left: 200px;
-
+.login h3,
+.register h3 {
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
-h1{
-    color: white;
-    text-align: center;
-    margin-top: 0px;
+.login input,
+.register input {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  margin: 10px 0;
+  border-bottom: 1px grey solid;
 }
 
-.cinema{
-    width: 200px;
-    display: block;
-    margin-right: auto;
-    margin-top: 80px;
-    margin-left: auto;
-
-}
-.page-2{
-    background-color: rgb(45, 45, 45);
-    width: 404px;
-    height: 500px;
-    margin-left: 0px;
-    margin-bottom: 100PX;
-    text-align: center;
-    
+.login button,
+.register button {
+  background-color: #c44d4d;
 }
 
-p{
-    color: white ;
-}
-
-.email{
-    margin-top: 150px;
-    border: none;
-    background-color: transparent;
-    border-bottom: 2px solid white;
-    color: #fff;
-    font-size: 20px;
-}
-
-.password{
-    margin-top: 40px;
-    border: none;
-    background-color: transparent;
-    border-bottom: 2px solid white;
-    color: #fff;
-    font-size: 20px;
-}
-
-button{
-    margin-top: 30px;
-    height: 30px;
-    border-radius: 5px;
-    width: 200px;
-    background-color: #C44D4D;
-    color: white;
-    border: none;
-}
-
-a{
-    color: #377DE5;
-    text-decoration: none;
+.login button:hover,
+.register button:hover {
+  background-color: #9e4040;
 }
