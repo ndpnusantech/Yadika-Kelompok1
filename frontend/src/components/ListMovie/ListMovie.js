@@ -33,12 +33,12 @@ const ListMovie = (props) => {
       >
         {dataMovie.map((data) => (
           <SwiperSlide id={data.id}>
-            <Link to={"/about"}>
-              <div id={data.id}>
+            <div id={data.id}>
+              <Link to={"/about"}>
                 <img src={`${data.poster}`} alt="" />
                 <h5>{data.title}</h5>
-              </div>
-            </Link>
+              </Link>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
