@@ -10,6 +10,7 @@ import ScrollToTop from "./ScrollToTop";
 import Login from "./pages/login/Login";
 import Register from "./pages/login/Register";
 import Audi from "./pages/audi";
+import Payment from "./pages/payment";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,6 +23,7 @@ root.render(
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/audi" element={<Audi />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
