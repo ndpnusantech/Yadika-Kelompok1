@@ -1,44 +1,45 @@
 const dataMovie = [
   {
     id: 1,
-    title: "example title",
-    poster: "./images/poster/movie1.jpeg",
+    title: "AVATAR",
+    poster: "./images/poster/Avatar.jpg",
   },
   {
     id: 2,
-    title: "example title",
-    poster: "./images/poster/movie2.jpeg",
+    title: "AVENGERS END GAME",
+    poster: "./images/poster/Avengers.jpeg",
   },
   {
     id: 3,
-    title: "example title",
-    poster: "./images/poster/movie3.jpeg",
+    title: "BLACK PANTHER",
+    poster: "./images/poster/Black-panther.jpg",
   },
   {
     id: 4,
-    title: "example title",
-    poster: "./images/poster/movie1.jpeg",
+    title: "BLACK WIDOW",
+    poster: "./images/poster/Black-widow.jpg",
   },
   {
     id: 5,
-    title: "example title",
-    poster: "./images/poster/movie3.jpeg",
+    title: "DR STRANGE MUKLTIVERSE OF MADNESS",
+    poster: "./images/poster/Dr_Strang.jpeg",
   },
   {
     id: 6,
-    title: "example title",
-    poster: "./images/poster/movie2.jpeg",
+    title: "AVENGERS INFINITY WAR",
+    poster: "./images/poster/infinity-war.jpg",
   },
   {
     id: 7,
-    title: "example title",
-    poster: "./images/poster/movie1.jpeg",
+    title: "IRON MAN",
+    poster: "./images/poster/ironman 1.jpg",
   },
   {
     id: 8,
-    title: "example title",
-    poster: "./images/poster/movie3.jpeg",
+    title: "IRON MAN 2",
+    poster: "./images/poster/ironman 2.jpg",
   },
 ];
 
 export { dataMovie };
+ 
