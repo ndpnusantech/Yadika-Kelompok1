@@ -6,10 +6,7 @@ import "./layouts.css";
 
 const NavigationBar = () => {
   return (
-    <Navbar
-      className="navbar"
-      style={{ backround: "#292929", padding: "20px" }}
-    >
+    <Navbar className="navbar" style={{ padding: "20px" }}>
       <Container>
         <Navbar.Brand href="#home">
           <img src="./images/logo/logo-cinema.png" alt="" />

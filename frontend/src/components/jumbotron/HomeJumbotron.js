@@ -14,7 +14,7 @@ import ContentSwiper from "./ContentSwiper";
 
 const HomeJumbotron = () => {
   return (
-    <>
+    <div style={{ marginTop: "-90px" }}>
       <Swiper
         cssMode={true}
         navigation={true}
@@ -52,7 +52,7 @@ const HomeJumbotron = () => {
           </SwiperSlide>
         </center>
       </Swiper>
-    </>
+    </div>
   );
 };
 
