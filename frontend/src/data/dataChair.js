@@ -3,145 +3,145 @@ const dataChair = [
     chair: "A1",
   },
   {
-    chair: "A1",
+    chair: "A2",
   },
   {
-    chair: "A1",
+    chair: "A3",
   },
   {
-    chair: "A1",
+    chair: "A4",
   },
   {
-    chair: "A1",
+    chair: "A5",
   },
   {
-    chair: "A1",
+    chair: "A6",
   },
   {
-    chair: "A1",
+    chair: "A7",
   },
   {
-    chair: "A1",
+    chair: "A8",
   },
   {
-    chair: "A1",
+    chair: "A9",
   },
   {
-    chair: "A1",
+    chair: "A10",
   },
   {
-    chair: "A1",
+    chair: "A11",
   },
   {
-    chair: "A1",
+    chair: "A12",
   },
   {
-    chair: "A1",
+    chair: "A13",
   },
   {
-    chair: "A1",
+    chair: "A14",
   },
   {
-    chair: "A1",
+    chair: "A15",
   },
   {
-    chair: "A1",
+    chair: "B1",
   },
   {
-    chair: "A1",
+    chair: "B2",
   },
   {
-    chair: "A1",
+    chair: "B3",
   },
   {
-    chair: "A1",
+    chair: "B4",
   },
   {
-    chair: "A1",
+    chair: "B5",
   },
   {
-    chair: "A1",
+    chair: "B6",
   },
   {
-    chair: "A1",
+    chair: "B7",
   },
   {
-    chair: "A1",
+    chair: "B8",
   },
   {
-    chair: "A1",
+    chair: "B9",
   },
   {
-    chair: "A1",
+    chair: "B10",
   },
   {
-    chair: "A1",
+    chair: "B11",
   },
   {
-    chair: "A1",
+    chair: "B12",
   },
   {
-    chair: "A1",
+    chair: "B13",
   },
   {
-    chair: "A1",
+    chair: "B14",
   },
   {
-    chair: "A1",
+    chair: "B15",
   },
   {
-    chair: "A1",
+    chair: "C1",
   },
   {
-    chair: "A1",
+    chair: "C2",
   },
   {
-    chair: "A1",
+    chair: "C3",
   },
   {
-    chair: "A1",
+    chair: "C4",
   },
   {
-    chair: "A1",
+    chair: "C6",
   },
   {
-    chair: "A1",
+    chair: "C7",
   },
   {
-    chair: "A1",
+    chair: "C8",
   },
   {
-    chair: "A1",
+    chair: "C9",
   },
   {
-    chair: "A1",
+    chair: "C10",
   },
   {
-    chair: "A1",
+    chair: "C11",
   },
   {
-    chair: "A1",
+    chair: "C12",
   },
   {
-    chair: "A1",
+    chair: "C13",
   },
   {
-    chair: "A1",
+    chair: "C14",
   },
   {
-    chair: "A1",
+    chair: "C15",
   },
   {
-    chair: "A1",
+    chair: "C16",
   },
   {
-    chair: "A1",
+    chair: "D1",
   },
   {
-    chair: "A1",
+    chair: "D2",
   },
   {
-    chair: "A1",
+    chair: "D3",
   },
 ];
 
