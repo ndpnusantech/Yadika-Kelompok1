@@ -2,7 +2,7 @@
 
 .login .input,
 .register .input {
-  padding: 200px 150px;
+  padding: 150px;
 }
 
 .login h3,
@@ -22,10 +22,10 @@
 
 .login button,
 .register button {
-  background-color: #c44d4d;
+  background-color: #c88623;
 }
 
 .login button:hover,
 .register button:hover {
-  background-color: #9e4040;
+  background-color: #ac731e;
 }

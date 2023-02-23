@@ -134,15 +134,6 @@ const dataChair = [
   {
     chair: "C16",
   },
-  {
-    chair: "D1",
-  },
-  {
-    chair: "D2",
-  },
-  {
-    chair: "D3",
-  },
 ];
 
 export { dataChair };

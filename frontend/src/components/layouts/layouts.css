@@ -1,4 +1,5 @@
-.navbar {
+.navbar,
+footer {
   background: rgba(41, 41, 41, 0.3);
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.5px);
@@ -14,10 +15,8 @@
 }
 
 footer {
-  background-color: #c54d4d;
   padding-top: 50px;
   padding-bottom: 50px;
-  margin-top: 150px;
 }
 
 footer a {

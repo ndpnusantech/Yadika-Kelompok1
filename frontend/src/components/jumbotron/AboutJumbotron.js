@@ -6,9 +6,10 @@ const AboutJumbotron = () => {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundImage: `url('./images/poster/wide-bg.png')`,
-    backgroundPosition: "0 -110px",
+    backgroundPosition: "0 -50px",
     color: "white",
-    padding: "100px 150px",
+    padding: "150px",
+    marginTop: "-90px",
   };
 
   const imgStyle = {

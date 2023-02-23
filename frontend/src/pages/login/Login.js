@@ -4,21 +4,19 @@ import "./login.css";
 const Login = () => {
   return (
     <center>
-      <div class="login d-flex" style={{ height: "100vh" }}>
-        <div class="w-50" style={{ background: "#C44D4D" }}>
-          <img
-            src="./images/icon/cinema.png"
-            alt=""
-            style={{
-              width: "250px",
-              marginTop: "100px",
-            }}
-          />
-          <h3 className="text-white text-center mt-5 w-50">
-            Boking your ticket to watch your favorite movie
-          </h3>
-        </div>
+      <div className="login d-flex" style={{ height: "100vh" }}>
+        <div
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          className="w-50 aos-animate aos-init"
+          style={{
+            backgroundImage: "url('./images/poster/bgLogin.png')",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}
+        ></div>
         <div className="input w-50 d-flex flex-column text-white">
+          <h2 className="mb-5 fw-bold">Login</h2>
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Password" />
           <button className="btn text-white rounded-2 p-2 my-4" type="submit">

@@ -1,10 +1,11 @@
 import React from "react";
+import Container from "react-bootstrap/esm/Container";
 import NavigationBar from "../components/layouts/NavigationBar";
 
 const Desktop = () => {
 
     const backgroundStyle = {
-        height: "90vh",
+        height: "75vh",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundImage: `url('./images/poster/Neon Avengers.png')`,
@@ -16,10 +17,16 @@ const Desktop = () => {
   return (
     <div>
       <NavigationBar />
-      <div  style={backgroundStyle} ></div>
-      <h2 style={{ margin: "20%", width : "340px" , position: "relative", color: "white",fontSize : "28px" , fontFamily : "Montserrat"}}>
+      <div  style={backgroundStyle}  >
+        <Container>
+        <div style={{position : "absolute" ,top : "9rem"}}>
+      <h2 style={{width : "400px" , fontWeight : "600" }}>
         See all the movies that are currently showing
       </h2>
+      </div>
+      </Container>
+      </div>
+     
 
     </div>
   );
