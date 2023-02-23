@@ -9,7 +9,7 @@ const Chair = (props) => {
     <button
       className="btn me-4 my-3 text-white"
       style={{ background: `${bgBtn}` }}
-      onClick={() => {
+       onClick={() => {
         props.onClick();
         changeColor();
       }}
