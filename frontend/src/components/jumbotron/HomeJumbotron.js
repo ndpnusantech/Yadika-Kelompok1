@@ -4,25 +4,30 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 import "./style.css";
 
 // import required modules
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+import { Autoplay, EffectFade, Navigation, Pagination, Keyboard } from "swiper";
 import ContentSwiper from "./ContentSwiper";
 
 const HomeJumbotron = () => {
   return (
     <div style={{ marginTop: "-90px" }}>
       <Swiper
-        cssMode={true}
+        effect={"fade"}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         navigation={true}
         loop={true}
         pagination={{ clickable: true, dynamicBullets: true }}
-        mousewheel={true}
         keyboard={true}
-        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+        modules={[Autoplay, EffectFade, Navigation, Pagination, Keyboard]}
         className="mySwiper"
       >
         <center>

@@ -8,7 +8,7 @@ const Chair = (props) => {
   return (
     <button
       className="btn me-4 my-3 text-white"
-      style={{ background: `${bgBtn}` }}
+      style={{ background: `${bgBtn}`, width: "50px" }}
       onClick={() => {
         props.onClick();
         changeColor();

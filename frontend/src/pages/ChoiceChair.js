@@ -51,7 +51,7 @@ const ChoiceChair = () => {
       </div>
 
       {valueBtn === true && (
-        <button className="text-white bg-success fw-bold w-100 border-0 py-2 mt-5 rounded-2">
+        <button className="text-white bg-success fw-bold w-100 border-0 py-2 mt-3 rounded-2">
           RP.35.0000
         </button>
       )}
