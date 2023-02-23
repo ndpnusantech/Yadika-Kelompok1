@@ -5,7 +5,7 @@ import "./login.css";
 const Register = () => {
   return (
     <center>
-      <div class="register d-flex" style={{ height: "100vh" }}>
+      <div class="register d-flex animate-to-right" style={{ height: "100vh" }}>
         <div
           class="w-50"
           style={{
@@ -14,7 +14,7 @@ const Register = () => {
             backgroundRepeat: "no-repeat",
           }}
         ></div>
-        <div className="input w-50 d-flex flex-column text-white">
+        <div className="input w-50 d-flex flex-column text-white animate-to-left">
           <h2 className="mb-5 fw-bold">Register</h2>
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Password" />

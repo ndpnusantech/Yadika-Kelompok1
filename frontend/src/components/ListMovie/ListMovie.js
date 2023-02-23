@@ -11,14 +11,19 @@ import "./listMovie.css";
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import { dataMovie } from "../../data/dataMovie";
-import { Link } from "react-router-dom";
+import CardMovie from "./CardMovie";
 
 const ListMovie = (props) => {
   return (
     <>
       <h2
         className="text-start text-white fw-bold"
-        style={{ margin: "200px 0 20px 60px", letterSpacing: "2px" }}
+        style={{
+          margin: "200px 0 20px 60px",
+          letterSpacing: "2px",
+          paddingLeft: "10px",
+          borderLeft: "4px solid #BC4E4E",
+        }}
       >
         {props.titleList}
       </h2>
@@ -33,12 +38,7 @@ const ListMovie = (props) => {
       >
         {dataMovie.map((data) => (
           <SwiperSlide id={data.id}>
-            <div id={data.id}>
-              <Link to={"/about"}>
-                <img src={`${data.poster}`} alt="" />
-                <h5>{data.title}</h5>
-              </Link>
-            </div>
+            <CardMovie id={data.id} poster={data.poster} title={data.title} />
           </SwiperSlide>
         ))}
       </Swiper>

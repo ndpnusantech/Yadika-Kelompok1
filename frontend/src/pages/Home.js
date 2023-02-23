@@ -27,7 +27,7 @@ const Home = () => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "0 -10px",
           height: "80vh",
-          marginBottom: "-150px",
+          marginBottom: "-350px",
         }}
       ></div>
       <Footer />

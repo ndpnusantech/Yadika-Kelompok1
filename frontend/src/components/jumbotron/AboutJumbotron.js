@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AboutJumbotron = () => {
   const styleContent = {
@@ -19,8 +20,16 @@ const AboutJumbotron = () => {
   };
   return (
     <div className="content-jumbotron d-flex" style={styleContent}>
-      <img src="./images/poster/movie2.jpeg" alt="" style={imgStyle} />
-      <div className="mt-5" style={{ width: "600px", marginLeft: "100px" }}>
+      <img
+        src="./images/poster/ant-man.jpeg"
+        alt=""
+        style={imgStyle}
+        className="animate-to-right"
+      />
+      <div
+        className="mt-5 animate-to-left"
+        style={{ width: "600px", marginLeft: "100px" }}
+      >
         <h1 className="fw-bold">ANT-MANT WASP QUANTUMANIA</h1>
         <p>
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -28,12 +37,15 @@ const AboutJumbotron = () => {
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat."
         </p>
-        <button
-          className="btn text-white px-3 py-2"
-          style={{ border: "1px white solid" }}
-        >
-          Book Now
-        </button>
+        <Link to={"/audi"}>
+          <button
+            className="btn text-white px-3 py-2"
+            style={{ border: "1px white solid" }}
+          >
+            Book Now
+          </button>
+        </Link>
+
         <button
           className="btn text-white px-3 py-2 bg-transparent ms-3"
           style={{ border: "1px white solid" }}

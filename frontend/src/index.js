@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/style.css";
 import "./styles/swiper.css";
+import "./styles/animate.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -13,7 +14,7 @@ import Audi from "./pages/audi";
 import ChoiceChair from "./pages/ChoiceChair";
 import Payment from "./pages/payment";
 import Profile from "./pages/Profile";
-import Desktop from "./pages/Desktop";
+import NowShowing from "./pages/NowShowing";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -29,7 +30,7 @@ root.render(
         <Route path="/choicechair" element={<ChoiceChair />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/desktop" element={<Desktop />} />
+        <Route path="/nowshowing" element={<NowShowing />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

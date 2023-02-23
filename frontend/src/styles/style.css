@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 body {
   background-color: #2a2141;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -14,19 +16,35 @@ a:hover {
   color: rgb(221, 221, 221);
 }
 
-.option button {
+.option button,
+.option .trailer {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 -10px;
+  border-radius: 2px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.option button {
   height: 100px;
   width: 500px;
-  border-radius: 5px;
-  transition: 0.8s;
+}
+
+.option .trailer {
+  height: 250px;
+  width: 500px;
+}
+
+.option .trailer:hover {
+  background-size: 150%;
+  border-right: 8px solid rgb(196, 57, 57);
+  background-position: 70% 50%;
 }
 
 .option button:hover {
   background-size: 150%;
-  border-right: 5px solid rgb(158, 24, 24);
+  border-right: 8px solid rgb(196, 57, 57);
   width: 504px;
   background-position: 50% 50%;
 }

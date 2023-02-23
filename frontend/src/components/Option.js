@@ -2,8 +2,11 @@ import React from "react";
 
 const Option = () => {
   return (
-    <div style={{ marginTop: "100px" }}>
-      <div className="option d-flex flex-column">
+    <div
+      style={{ marginTop: "100px" }}
+      className="option container d-flex justify-content-between"
+    >
+      <div className=" d-flex flex-column">
         <button
           className="btn text-white text-start fs-3 fw-bold ps-5"
           style={{
@@ -21,7 +24,28 @@ const Option = () => {
           Marvel Movie
         </button>
       </div>
-      <div></div>
+      <div
+        className="trailer p-4"
+        style={{
+          backgroundImage: `url('./images/poster/spiderMan.png')`,
+        }}
+      >
+        <h3
+          className=" text-white fw-bold mt-3"
+          style={{ letterSpacing: "2px", width: "300px" }}
+        >
+          SPIDERMAN HOME COMING
+        </h3>
+        <div className="d-flex mt-5">
+          <i class="bi bi-play-circle text-white fs-1"></i>
+          <h5
+            className=" text-white mt-3 ms-3"
+            style={{ letterSpacing: "1px" }}
+          >
+            See Trailer
+          </h5>
+        </div>
+      </div>
     </div>
   );
 };

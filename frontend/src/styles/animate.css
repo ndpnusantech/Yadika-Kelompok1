@@ -1,0 +1,41 @@
+.animate-to-right {
+  animation: moveRight 1s forwards;
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-to-left {
+  animation: moveLeft 1s forwards;
+}
+
+@keyframes moveLeft {
+  from {
+    transform: translateX(150%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.move-up-down {
+  animation: moveUpDown 2s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+}

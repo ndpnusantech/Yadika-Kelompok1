@@ -1,17 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-
 .list-movie {
   font-family: "Montserrat", sans-serif;
 }
 
-.list-movie img {
+.card-movie {
   width: 250px;
-  border-radius: 10px;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
-.list-movie h5 {
-  width: 250px;
-  text-align: left;
-  margin: 20px 0;
+.card-movie .img-poster {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
 }
