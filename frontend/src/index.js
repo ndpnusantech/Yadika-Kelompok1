@@ -13,7 +13,7 @@ import Audi from "./pages/audi";
 import ChoiceChair from "./pages/ChoiceChair";
 import Payment from "./pages/payment";
 import Profile from "./pages/Profile";
-
+import Desktop from "./pages/Desktop";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -29,6 +29,7 @@ root.render(
         <Route path="/choicechair" element={<ChoiceChair />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/desktop" element={<Desktop />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
