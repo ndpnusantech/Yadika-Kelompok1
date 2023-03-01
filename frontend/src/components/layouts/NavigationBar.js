@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import "./layouts.css";
 
 const NavigationBar = () => {
+  const isLogin = localStorage.getItem("isLogin");
   return (
     <Navbar className="navbar" style={{ padding: "20px" }}>
       <Container>
@@ -18,9 +19,19 @@ const NavigationBar = () => {
           <Link to={"/"} className="me-5">
             History
           </Link>
-          <Link to={"/login"} className="fw-bold">
-            Login <img src="./images/icon/enter.png" alt="" />
-          </Link>
+          {isLogin ? (
+            <Link to={"/profile"}>
+              <img
+                src="./images/image-profil.png"
+                alt=""
+                style={{ width: "30px" }}
+              />
+            </Link>
+          ) : (
+            <Link to={"/login"} className="fw-bold">
+              Login <img src="./images/icon/enter.png" alt="" />
+            </Link>
+          )}
         </Nav>
       </Container>
     </Navbar>

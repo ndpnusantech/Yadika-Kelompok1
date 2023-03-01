@@ -1,8 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap");
 
-.login .input,
-.register .input {
+input {
+  outline: none;
+}
+
+.login .input {
   padding: 150px;
+}
+.register .input {
+  padding: 100px 150px;
 }
 
 .login h3,
