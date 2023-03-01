@@ -1,61 +1,102 @@
 import React, { useState } from "react";
-import Container from "react-bootstrap/esm/Container";
-import Chair from "../components/ChoiceChair/Chair";
+import { Link } from "react-router-dom";
+import NavigationBar from "../components/layouts/NavigationBar";
 import { dataChair } from "../data/dataChair";
 
 const ChoiceChair = () => {
-  const [bgBtn, setBgBtn] = useState("#C44D4D");
-  const [valueBtn, setValueBtn] = useState(false);
+  const [selectedChair, setSelectedChair] = useState(null);
+  const [valueBtn, setValue] = useState(false);
 
-  const changeValue = () => {
-    if (bgBtn === "#C44D4D") {
-      setBgBtn("#4FA332");
-      setValueBtn(true);
-    }
+  const handleClick = (chair) => {
+    setSelectedChair(chair);
+    setValue(true);
   };
-  return (
-    <Container>
-      <h5 className="bg-white py-2 my-5 rounded-bottom text-center">Screen</h5>
-      <div className="d-flex justify-content-between text-white">
-        <div>
-          <p>
-            <img src="./images/icon/red.png" alt="" /> unfilled
-          </p>
-          <p>
-            <img src="./images/icon/grey.png" alt="" /> filled
-          </p>
-          <p>
-            <img src="./images/icon/green.png" alt="" /> choice
-          </p>
-        </div>
-        <select
-          name=""
-          id=""
-          className="py-2 px-3 bg-dark text-white"
-          style={{ height: "50px" }}
-        >
-          <option value="">14:00 - 16:00</option>
-          <option value="">14:00 - 16:00</option>
-          <option value="">14:00 - 16:00</option>
-          <option value="">14:00 - 16:00</option>
-        </select>
-      </div>
-      <div className="d-flex flex-wrap justify-content-center">
-        {dataChair.map((data) => (
-          <Chair
-            numberChair={data.chair}
-            onClick={() => changeValue()}
-            value={valueBtn}
-          />
-        ))}
-      </div>
 
-      {valueBtn === true && (
-        <button className="text-white bg-success fw-bold w-100 border-0 py-2 mt-3 rounded-2">
-          RP.35.0000
-        </button>
-      )}
-    </Container>
+  const styleContent = {
+    height: "80vh",
+    backgroundSize: "auto",
+    backgroundRepeat: "no-repeat",
+    backgroundImage: `url('./images/poster/wide-bg2.png')`,
+    marginTop: "-90px",
+  };
+  const imgStyle = {
+    width: "300px",
+    height: "390px",
+    borderRadius: "10px",
+  };
+
+  return (
+    <div>
+      <NavigationBar />
+      <div style={styleContent}></div>
+      <div
+        className="d-flex container justify-content-between"
+        style={{ marginTop: "-300px" }}
+      >
+        <div>
+          <img src="./images/poster/ant-man.jpeg" alt="" style={imgStyle} />
+          {valueBtn && (
+            <div
+              className="card d-flex flex-row bg-transparent text-white px-3 justify-content-between mt-4"
+              style={{ borderColor: "grey", height: "50px" }}
+            >
+              <p>
+                <span className="fs-3">3</span>Row
+              </p>
+              <p>
+                <span className="fs-3">2</span>th
+              </p>
+              <p className="mt-3">Rp.35.000</p>
+            </div>
+          )}
+          <div className="d-flex justify-content-between mt-5">
+            <button
+              className="btn px-4"
+              style={{
+                color: "#C88623",
+                border: "0.5px solid #C88623",
+                borderRadius: "3px",
+              }}
+            >
+              Cancel
+            </button>
+            <Link to={"/payment"}>
+              <button
+                className="btn text-white px-5"
+                style={{ backgroundColor: "#C88623", borderRadius: "3px" }}
+              >
+                Next
+              </button>
+            </Link>
+          </div>
+        </div>
+        <div className="mt-5 px-5">
+          <h1 className="w-50 text-white">ANT-MANT WASP QUANTUMANIA</h1>
+          <img
+            src="./images/screen.png"
+            alt=""
+            style={{ marginTop: "150px" }}
+          />
+          <div className="d-flex flex-wrap justify-content-center mt-5">
+            {dataChair.map((data) => (
+              <button
+                key={data.chair}
+                className="btn me-3 mb-5"
+                style={{
+                  width: "50px",
+                  color: "white",
+                  backgroundColor:
+                    selectedChair === data.chair ? "#F10606" : "#898989",
+                }}
+                onClick={() => handleClick(data.chair)}
+              >
+                {data.chair}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

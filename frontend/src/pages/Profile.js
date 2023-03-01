@@ -1,55 +1,30 @@
 import React from "react";
-import Container from "react-bootstrap/esm/Container";
 import NavigationBar from "../components/layouts/NavigationBar";
 
 const Profile = () => {
+  const username = localStorage.getItem("username");
+  const email = localStorage.getItem("email");
   return (
     <div>
       <NavigationBar />
-      <Container>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-around",
-            marginTop: "5rem",
-            width: "60% ",
-          }}
-        >
-          <div
-            style={{
-              backgroundColor: "white",
-              width: "254px",
-              height: "254px",
-              borderRadius: "100%",
-              display: "flex",
-            }}
-          ></div>
-          <div style={{ color: "white", marginTop: "60px" }}>
-            <p>Nama:Dry YUdho</p>
-            <p>Email:jsdhuwie</p>
-            <button
-              style={{
-                backgroundColor: "red",
-                border: "0px",
-                borderRadius: "5px",
-              }}
-            >
-              Logout
-            </button>
-          </div>
+      <div className="container d-flex py-5">
+        <div className="d-flex flex-column me-3">
+          <img
+            src="./images/image-profil.png"
+            alt=""
+            style={{ width: "300px" }}
+          />
+          <button className="btn bg-success text-white w-50 mx-auto mt-5">
+            Edit
+          </button>
         </div>
-        <button
-          style={{
-            backgroundColor: "green",
-            border: "0px",
-            borderRadius: "5px",
-          }}
-        >
-          Edit{" "}
-        </button>
-      </Container>
-      <hr style={{ color: "white", width: "100%" }}></hr>
-      <h1 style={{ color: "white", textAlign: "center" }}>Riwayat Transaksi</h1>
+        <div className="text-white ms-5 mt-5">
+          <h5>Nama: {username}</h5>
+          <h5>Email: {email}</h5>
+          <button className="btn bg-danger text-white mt-4">Log Out</button>
+        </div>
+      </div>
+      <hr className="text-white" />
     </div>
   );
 };
