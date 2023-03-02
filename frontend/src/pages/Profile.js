@@ -21,6 +21,7 @@ const Profile = () => {
         <div className="text-white ms-5 mt-5">
           <h5>Nama: {username}</h5>
           <h5>Email: {email}</h5>
+          <h5>Email: tes</h5>
           <button className="btn bg-danger text-white mt-4">Log Out</button>
         </div>
       </div>
