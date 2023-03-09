@@ -156,7 +156,7 @@ const TransactionInfo = () => {
               </DataTiket>
             </div>
             <hr />
-            <h6>CODE PEMBAYARAN : 35261727355321</h6>
+            <h6>CODE PEMBAYARAN : 352617273553212</h6>
           </TiketCustomers>
         </WrapTiket>
       </Wrap>
