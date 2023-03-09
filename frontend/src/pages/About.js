@@ -6,8 +6,9 @@ import NavigationBar from "../components/layouts/NavigationBar";
 import ListMovie from "../components/ListMovie/ListMovie";
 
 const About = () => {
+  
   return (
-    <div className="about text-white">
+    <div className="about text-white" >
       <NavigationBar />
       <AboutJumbotron />
       <Container>
