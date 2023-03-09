@@ -21,6 +21,10 @@ const TransactionInfo = () => {
   const WrapAdmin = styled.div`
     width: 45%;
     height: 100px;
+    margin-top : -5px;
+    img{
+      margin :7px 0px;
+    }
   `;
 
   const Td = styled.td`
@@ -52,6 +56,7 @@ const TransactionInfo = () => {
     background-color: #e0e0e0;
     width: max-content;
     padding: 10px;
+    margin-top : -15px;
 
     /* Selector ketika ditampilkan pada .warpTiket */
     .content {
@@ -71,6 +76,10 @@ const TransactionInfo = () => {
     .text p {
       font-size: 11px;
       margin: 5px 0;
+    }
+    .text p:nth-child(2) {
+      font-size: 11px;
+      width : 140px
     }
   `;
 
@@ -122,13 +131,13 @@ const TransactionInfo = () => {
         <WrapTiket>
           <TiketCustomers>
             <div className="content">
-              <div className="poster">
+              <div className="poster" style={{marginTop : "-4px"}}>
                 <img
                   src="./images/poster/ant-man.jpeg"
                   alt=""
                   style={{
                     borderRadius: "8px",
-                    width: "80px",
+                    width: "90px",
                     marginTop: "7px",
                   }}
                 />
