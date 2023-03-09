@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.container-sidebar{
+  display: flex;
+}
+
+main {
+  width: 100%;
+}
+/* 
+.logo {
+  font-size: 40px;
+} */
+
+
+
+/* .link_text {
+  font-size: 14px;
+} */
+
+.NavLink{
+display: flex;
+color : white;
+padding: 10px 15px;
+gap: 15px;
+transition: all 0.5s;
+border-radius: 0 0 0 13px   ;
+}
+
+.NavLink:hover{
+    background-color: white;
+    color: black;
+    transition: all 0.5s;
+  }
+
+
+  
+  .active {
+    background: white;
+    color: black;
+  }

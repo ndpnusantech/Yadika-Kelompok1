@@ -1,0 +1,35 @@
+/* button Transaction */
+
+.TransactionBtn{
+    background-color: #377DE5;
+    color: white;
+    border: 0px;
+    border-radius: 15px;
+    margin: 2px 3px;
+    padding: 5px 11px;
+    font-size: 13px;
+
+}
+
+
+.TransactionBtn:hover{
+    background-color: #5e8cd1;
+}
+
+/* button delete */
+
+.DeleteBtn{
+    background-color: #FF0000;
+    color: white;
+    border: 0px;
+    border-radius: 15px;
+    margin: 2px 3px;
+    padding: 5px 11px;
+    font-size: 13px;
+
+}
+
+
+.DeleteBtn:hover{
+    background-color: #ff4444;
+}
