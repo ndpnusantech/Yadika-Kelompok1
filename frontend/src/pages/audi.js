@@ -6,7 +6,10 @@ const Audi = () => {
   return (
     <React.Fragment>
       <NavigationBar />
-      <div className="d-flex justify-content-center mt-5">
+      <div
+        className="d-flex justify-content-center mt-5"
+        style={{ height: "100vh" }}
+      >
         <div className="me-5 ">
           <img
             src="./images/poster/ant-man.jpeg"

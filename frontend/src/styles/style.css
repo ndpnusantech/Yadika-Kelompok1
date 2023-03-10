@@ -48,3 +48,13 @@ a:hover {
   width: 504px;
   background-position: 50% 50%;
 }
+
+.table-history tr td {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.table-payment tr td {
+  font-size: 14px;
+}
