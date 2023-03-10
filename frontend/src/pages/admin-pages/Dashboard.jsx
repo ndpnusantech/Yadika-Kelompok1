@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Sidebar from '../../components/admin-components/sidebar/Sidebar';
 
 const Dashboard = () => {
   const SectionAdmin = styled.section`
@@ -15,9 +16,11 @@ const Dashboard = () => {
   
   return (
     <SectionAdmin>
-      <h1>this is Dashboard</h1>
+      <Sidebar>
+        <h1>this is Dashboard</h1>
+      </Sidebar>
     </SectionAdmin>
-  )
+  );
 }
 
 export default Dashboard

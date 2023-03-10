@@ -14,27 +14,36 @@ import ChoiceChair from "./pages/ChoiceChair";
 import Payment from "./pages/payment";
 import Profile from "./pages/Profile";
 import NowShowing from "./pages/NowShowing";
-
+import History from "./pages/History";
+import Dashboard from "./pages/admin-pages/Dashboard";
+import MovieList from "./pages/admin-pages/MovieList";
+import Orders from "./pages/admin-pages/Orders";
 
 const app = () => {
- return(
-  <section>
-    <BrowserRouter>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/audi" element={<Audi />} />
-        <Route path="/choicechair" element={<ChoiceChair />} />
-        <Route path="/payment" element={<Payment />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/nowshowing" element={<NowShowing />} />
-      </Routes>
-    </BrowserRouter>
+  return (
+    <section>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          {/* User */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/audi" element={<Audi />} />
+          <Route path="/choicechair" element={<ChoiceChair />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/nowshowing" element={<NowShowing />} />
+          <Route path="/history" element={<History />} />
+          {/* admin */}
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/movieList" element={<MovieList />} />
+          <Route path="/orders" element={<Orders />} />
+        </Routes>
+      </BrowserRouter>
     </section>
-)
-}
+  );
+};
 
-export default app
+export default app;
