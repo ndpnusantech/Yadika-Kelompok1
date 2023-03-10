@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/esm/Container";
 import HomeJumbotron from "../components/jumbotron/HomeJumbotron";
 import Footer from "../components/layouts/Footer";
@@ -7,7 +7,20 @@ import ListMovie from "../components/ListMovie/ListMovie";
 import Option from "../components/Option";
 import OurPartner from "../components/OurPartner";
 
+// modal
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import Ticket from "../components/Ticket";
+
 const Home = () => {
+  let isOrder = localStorage.getItem("isOrder");
+  const [show, setShow] = useState(isOrder);
+
+  const close = () => {
+    localStorage.removeItem("isOrder");
+    setShow(false);
+  };
+
   return (
     <div className="home">
       <NavigationBar />
@@ -30,6 +43,19 @@ const Home = () => {
           marginBottom: "-350px",
         }}
       ></div>
+      <Modal show={show} size="lg">
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Ticket />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={close}>
+            Save Ticket
+          </Button>
+        </Modal.Footer>
+      </Modal>
       <Footer />
     </div>
   );

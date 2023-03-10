@@ -1,7 +1,6 @@
 import React from "react";
 import TransactionBtn from "../buttons/TransactionBtn";
 import DeleteBtn from "../buttons/DeleteBtn";
-import { BsSearch } from "react-icons/bs";
 import styled from "styled-components";
 function TabelOrder() {
   const WrapTable = styled.div`
@@ -11,7 +10,7 @@ function TabelOrder() {
     border-radius: 13px;
     background-color: #f8f6ee;
     margin: auto;
-    font-size : 13px;
+    font-size: 13px;
   `;
   const ContentTable = styled.div`
     padding: 10px;
@@ -105,7 +104,6 @@ function TabelOrder() {
     }
     :nth-child(6) {
       width: 120px;
-
     }
 
     :nth-child(7) {
@@ -113,16 +111,14 @@ function TabelOrder() {
     }
   `;
 
-
   const Td = styled.td`
-  border: 1px solid rgb(176, 176, 176);
+    border: 1px solid rgb(176, 176, 176);
     padding: 5px 4px;
 
-    :nth-child(3){
-        width: max-content;
-      }    
-
-`
+    :nth-child(3) {
+      width: max-content;
+    }
+  `;
   const Tr = styled.tr`
     background-color: #fcfcfc;
   }
@@ -131,16 +127,14 @@ function TabelOrder() {
     background-color: #c8c8c8;
   }
   
-  ` 
+  `;
 
   return (
     <WrapTable>
       <ContentTable>
         <WrapInput>
           <input type="text" placeholder="Search" style={input} />
-          <Button>
-            <BsSearch />
-          </Button>
+          <Button></Button>
         </WrapInput>
       </ContentTable>
       <WrapTabelOrder>
@@ -214,7 +208,6 @@ function TabelOrder() {
               <DeleteBtn />
             </Td>
           </Tr>
-        
         </TableOrder>
       </WrapTabelOrder>
     </WrapTable>

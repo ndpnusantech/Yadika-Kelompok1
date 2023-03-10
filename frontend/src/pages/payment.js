@@ -6,7 +6,10 @@ const payment = () => {
   return (
     <div>
       <NavigationBar />
-      <div className="d-flex justify-content-center mt-5">
+      <div
+        className="d-flex justify-content-center mt-5"
+        style={{ height: "100vh" }}
+      >
         <div className="me-5 ">
           <img
             src="./images/poster/ant-man.jpeg"
@@ -18,9 +21,8 @@ const payment = () => {
           </h5>
         </div>
         <div className="ms-5">
-          <PaymentBtn name="34.700" />
-          <PaymentBtn name="36.000" />
-          <PaymentBtn name="35.800" />
+          <PaymentBtn logo="logo-indomaret.png" name="Indomart" />
+          <PaymentBtn logo="logo-alfamart.png" name="Alfamart" />
         </div>
       </div>
     </div>
