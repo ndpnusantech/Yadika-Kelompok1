@@ -24,12 +24,9 @@ const Register = () => {
   };
   return (
     <center>
-      <div
-        className="register d-flex animate-to-right"
-        style={{ height: "100vh" }}
-      >
+      <div class="register d-flex animate-to-right" style={{ height: "100vh" }}>
         <div
-          className="w-50"
+          class="w-50"
           style={{
             backgroundImage: "url('./images/poster/bgLogin.png')",
             backgroundSize: "cover",

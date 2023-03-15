@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import NavigationBar from "../components/layouts/NavigationBar";
 import { dataChair } from "../data/dataChair";
-import { dataDate } from "../data/dataDate";
 
 const ChoiceChair = () => {
   const [selectedChair, setSelectedChair] = useState(null);
@@ -73,19 +72,11 @@ const ChoiceChair = () => {
         </div>
         <div className="mt-5 px-5">
           <h1 className="w-50 text-white">ANT-MANT WASP QUANTUMANIA</h1>
-          <h2 className="text-white mt-4">AUDI #1</h2>
-          <div className="d-flex justify-content-between mt-5">
-            {dataDate.map((data) => (
-              <div>
-                <p className="text-white text-center">{data.day}</p>
-                <button className="btn text-white border-white ms-2">
-                  {data.date}
-                </button>
-              </div>
-            ))}
-          </div>
-
-          <img src="./images/screen.png" alt="" style={{ marginTop: "50px" }} />
+          <img
+            src="./images/screen.png"
+            alt=""
+            style={{ marginTop: "150px" }}
+          />
           <div className="d-flex flex-wrap justify-content-center mt-5">
             {dataChair.map((data) => (
               <button

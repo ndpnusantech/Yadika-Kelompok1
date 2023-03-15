@@ -16,12 +16,16 @@ const NavigationBar = () => {
         <Nav className="ms-auto">
           <Link to={"/"}>Home</Link>
           <Link to={"/nowshowing"}>Now Showing</Link>
-          <Link to={"/history"} className="me-5">
+          <Link to={"/"} className="me-5">
             History
           </Link>
           {isLogin ? (
             <Link to={"/profile"}>
-              <img src="./images/user.png" alt="" style={{ width: "30px" }} />
+              <img
+                src="./images/image-profil.png"
+                alt=""
+                style={{ width: "30px" }}
+              />
             </Link>
           ) : (
             <Link to={"/login"} className="fw-bold">

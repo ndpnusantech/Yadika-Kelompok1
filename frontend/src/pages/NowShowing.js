@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../components/layouts/Footer";
 import NavigationBar from "../components/layouts/NavigationBar";
 import CardMovie from "../components/ListMovie/CardMovie";
 import { dataMovie } from "../data/dataMovie";
@@ -45,7 +44,6 @@ const NowShowing = () => {
           ))}
         </div>
       </center>
-      <Footer />
     </div>
   );
 };
