@@ -5,7 +5,7 @@ const AudiBtn = (props) => {
   return (
     <Link to={"/choicechair"}>
       <button
-        className="btn bg-white me-4"
+        className="btn bg-dark text-white me-4"
         style={{ marginTop: "20px", width: "170px" }}
       >
         {props.audi}
