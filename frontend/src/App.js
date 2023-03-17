@@ -18,6 +18,7 @@ import History from "./pages/History";
 import Dashboard from "./pages/admin-pages/Dashboard";
 import MovieList from "./pages/admin-pages/MovieList";
 import Orders from "./pages/admin-pages/Orders";
+import LoginAdmin from "./pages/admin-pages/LoginAdmin";
 
 const app = () => {
   return (
@@ -40,6 +41,7 @@ const app = () => {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/movieList" element={<MovieList />} />
           <Route path="/orders" element={<Orders />} />
+          <Route path="/LoginAdmin" element={<LoginAdmin />} />
         </Routes>
       </BrowserRouter>
     </section>

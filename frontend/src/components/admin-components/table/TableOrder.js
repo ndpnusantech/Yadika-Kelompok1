@@ -2,6 +2,9 @@ import React from "react";
 import TransactionBtn from "../buttons/TransactionBtn";
 import DeleteBtn from "../buttons/DeleteBtn";
 import styled from "styled-components";
+import {AiOutlineSearch} from 'react-icons/ai';
+
+
 function TabelOrder() {
   const WrapTable = styled.div`
     max-width: max-content;
@@ -43,7 +46,7 @@ function TabelOrder() {
     background-color: #ededed;
     padding: 5px 8px;
     border-radius: 0 5px 5px 0;
-
+        
     :hover {
       background-color: rgb(195, 195, 195);
     }
@@ -134,7 +137,9 @@ function TabelOrder() {
       <ContentTable>
         <WrapInput>
           <input type="text" placeholder="Search" style={input} />
-          <Button></Button>
+          <Button>
+            <AiOutlineSearch/>
+          </Button>
         </WrapInput>
       </ContentTable>
       <WrapTabelOrder>
