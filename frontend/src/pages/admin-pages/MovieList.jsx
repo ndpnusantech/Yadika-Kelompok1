@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Sidebar from "../../components/admin-components/sidebar/Sidebar";
+import TableList from "../../components/admin-components/table/TableList";
+import AdminProfil from "../../components/admin-components/Adminprofile";
+
 
 const Dashboard = () => {
   const SectionAdmin = styled.section`
@@ -15,7 +18,8 @@ const Dashboard = () => {
   return (
     <SectionAdmin>
       <Sidebar>
-        <h1>Movie list</h1>
+        <AdminProfil/>
+        <TableList />
       </Sidebar>
     </SectionAdmin>
   );

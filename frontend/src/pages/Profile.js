@@ -52,6 +52,7 @@ const Profile = () => {
             </Modal.Header>
             <Modal.Body>
               <div className="d-flex flex-column px-4">
+                <label htmlFor="text">Name</label>
                 <input
                   type="text"
                   placeholder="Change Name"
@@ -59,6 +60,7 @@ const Profile = () => {
                   value={editUsername}
                   onChange={(e) => setUsername(e.target.value)}
                 />
+                <label htmlFor="">Email</label>
                 <input
                   type="text"
                   placeholder="Change Email"
@@ -66,6 +68,18 @@ const Profile = () => {
                   value={editEmail}
                   onChange={(e) => setEmail(e.target.value)}
                 />
+                <label htmlFor="">Password</label>
+                <input
+                  type="password"
+                  placeholder="Change Email"
+                  className="p-1 my-3"
+                  value={editEmail}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              
+
+                <label htmlFor="">Profile</label>
+                <input type="file" />
               </div>
             </Modal.Body>
             <Modal.Footer>
