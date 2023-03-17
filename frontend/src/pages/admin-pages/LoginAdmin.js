@@ -22,13 +22,13 @@ function LoginAdmin() {
       <div className="login_box">
         <div className="left">
           <div className="top_link">
-            <a href="/">
+            {/* <a href="/">
               <img
                 src="https://drive.google.com/u/0/uc?id=16U__U5dJdaTfNGobB_OpwAJ73vM50rPV&export=download"
                 alt=""
               />
               Return home
-            </a>
+            </a> */}
           </div>
           <div className="contact">
             <div>
@@ -42,7 +42,13 @@ function LoginAdmin() {
           </div>
         </div>
         <div className="right">
-		  <Bgblur/>
+          <Bgblur>
+
+          </Bgblur>
+          <div class="bg-text">
+            <h1>CGV</h1>
+            <p>cgv watch movies</p>
+          </div>
         </div>
       </div>
     </section>
