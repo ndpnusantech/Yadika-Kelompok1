@@ -51,3 +51,22 @@
 .AddMovie:hover{
     background-color: #528de6;
 }
+
+/* button Edit */
+
+.EditBtn{
+    background-color: #377DE5;
+    color: white;
+    border: 0px;
+    border-radius: 15px;
+    margin: 2px 3px;
+    padding: 5px 19px;
+    font-size: 13px;
+
+}
+
+
+
+.EditBtn:hover{
+    background-color: #5e8cd1;
+}

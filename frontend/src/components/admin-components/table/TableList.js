@@ -1,5 +1,5 @@
 import React from "react";
-import TransactionBtn from "../buttons/TransactionBtn";
+import EditBtn from "../buttons/EditBtn";
 import DeleteBtn from "../buttons/DeleteBtn";
 import styled from "styled-components";
 import AddMovie from "../buttons/AddMovie"
@@ -115,9 +115,12 @@ function TableList() {
     }
 
     :nth-child(7) {
-      width: 220px;
+      width: 70px;
     }
     :nth-child(8) {
+      width: 220px;
+    }
+    :nth-child(9) {
       width: 150px;
     }
   `;
@@ -173,6 +176,7 @@ function TableList() {
             <Th>Poster film</Th>
             <Th>Durasi film</Th>
             <Th>Harga tiket</Th>
+            <Th>Stok</Th>
             <Th>action</Th>
             <Th>Detail film</Th>
           </Tr>
@@ -185,12 +189,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -202,12 +207,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -219,12 +225,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -236,12 +243,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -253,12 +261,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -270,12 +279,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -287,12 +297,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -304,12 +315,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -321,12 +333,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -338,12 +351,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -355,12 +369,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -372,12 +387,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -389,12 +405,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -406,12 +423,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -423,12 +441,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -440,12 +459,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -457,12 +477,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -474,12 +495,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -491,12 +513,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -508,12 +531,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -525,12 +549,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           <Tr>
@@ -542,12 +567,13 @@ function TableList() {
             </Td>
             <Td>2 jam 4 menit</Td>
             <Td>45.000</Td>
+            <Td>60</Td>
             <Td>
-              <TransactionBtn />
+              <EditBtn />
               <DeleteBtn />
             </Td>
             <Td>
-                <DetailFilm href="#">detail</DetailFilm>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
           
