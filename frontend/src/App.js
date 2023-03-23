@@ -19,6 +19,7 @@ import Dashboard from "./pages/admin-pages/Dashboard";
 import MovieList from "./pages/admin-pages/MovieList";
 import Orders from "./pages/admin-pages/Orders";
 import LoginAdmin from "./pages/admin-pages/LoginAdmin";
+import UpComing from "./pages/UpComing";
 
 const app = () => {
   return (
@@ -36,6 +37,7 @@ const app = () => {
           <Route path="/payment" element={<Payment />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/nowshowing" element={<NowShowing />} />
+          <Route path="/upcoming" element={<UpComing />} />
           <Route path="/history" element={<History />} />
           {/* admin */}
           <Route path="/dashboard" element={<Dashboard />} />

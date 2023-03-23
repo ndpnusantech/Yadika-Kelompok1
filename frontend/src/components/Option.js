@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Option = () => {
   return (
@@ -7,14 +8,17 @@ const Option = () => {
       className="option container d-flex justify-content-between"
     >
       <div className=" d-flex flex-column">
-        <button
-          className="btn text-white text-start fs-3 fw-bold ps-5"
-          style={{
-            backgroundImage: `url('./images/poster/nowShowingBg.png')`,
-          }}
-        >
-          Now Showing
-        </button>
+        <Link to={"/upcoming"}>
+          <button
+            className="btn text-white text-start fs-3 fw-bold ps-5"
+            style={{
+              backgroundImage: `url('./images/poster/nowShowingBg.png')`,
+            }}
+          >
+            UP COMING
+          </button>
+        </Link>
+
         <button
           className="btn text-white mt-5 text-start fs-3 fw-bold ps-5"
           style={{
