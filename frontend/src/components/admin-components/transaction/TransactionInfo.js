@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import TransactionStatus from "./TransactionStatus"; 
 
 const TransactionInfo = () => {
   const TransactionInfo = styled.div`
@@ -160,7 +161,9 @@ const TransactionInfo = () => {
           </TiketCustomers>
         </WrapTiket>
       </Wrap>
+      <TransactionStatus />
     </TransactionInfo>
+
   );
 };
 
