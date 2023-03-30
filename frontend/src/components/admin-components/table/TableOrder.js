@@ -2,7 +2,7 @@ import React from "react";
 import TransactionBtn from "../buttons/TransactionBtn";
 import DeleteBtn from "../buttons/DeleteBtn";
 import styled from "styled-components";
-function TabelOrder() {
+function TabelOrder(props) {
   const WrapTable = styled.div`
     max-width: max-content;
     padding: 0 10px;
@@ -156,55 +156,7 @@ function TabelOrder() {
             <Td>Monday, 2/17/2023</Td>
             <Td>45.000</Td>
             <Td>
-              <TransactionBtn />
-              <DeleteBtn />
-            </Td>
-          </Tr>
-          <Tr>
-            <Td>1</Td>
-            <Td>sandi ramdani</Td>
-            <Td>Ant-man and the Wasp : Quantumania </Td>
-            <Td>1</Td>
-            <Td>Monday, 2/17/2023</Td>
-            <Td>45.000</Td>
-            <Td>
-              <TransactionBtn />
-              <DeleteBtn />
-            </Td>
-          </Tr>
-          <Tr>
-            <Td>1</Td>
-            <Td>sandi ramdani</Td>
-            <Td>Ant-man and the Wasp : Quantumania </Td>
-            <Td>1</Td>
-            <Td>Monday, 2/17/2023</Td>
-            <Td>45.000</Td>
-            <Td>
-              <TransactionBtn />
-              <DeleteBtn />
-            </Td>
-          </Tr>
-          <Tr>
-            <Td>1</Td>
-            <Td>sandi ramdani</Td>
-            <Td>Ant-man and the Wasp : Quantumania </Td>
-            <Td>1</Td>
-            <Td>Monday, 2/17/2023</Td>
-            <Td>45.000</Td>
-            <Td>
-              <TransactionBtn />
-              <DeleteBtn />
-            </Td>
-          </Tr>
-          <Tr>
-            <Td>1</Td>
-            <Td>sandi ramdani</Td>
-            <Td>Ant-man and the Wasp : Quantumania </Td>
-            <Td>1</Td>
-            <Td>Monday, 2/17/2023</Td>
-            <Td>45.000</Td>
-            <Td>
-              <TransactionBtn />
+              <TransactionBtn onClick={props.show} />
               <DeleteBtn />
             </Td>
           </Tr>
