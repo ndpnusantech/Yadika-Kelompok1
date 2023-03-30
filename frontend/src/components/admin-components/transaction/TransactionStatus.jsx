@@ -29,7 +29,11 @@ function TransactionStatus() {
         <Card>
           <Card.Header>
             <CustomToggle eventKey="0">Bukti Pembayaran</CustomToggle>
-            <Button variant="primary" onClick={handleShow} style={{marginLeft : "5px"}}>
+            <Button
+              variant="primary"
+              onClick={handleShow}
+              style={{ marginLeft: "5px" }}
+            >
               Status Transaksi
             </Button>
           </Card.Header>
@@ -55,9 +59,7 @@ function TransactionStatus() {
         <Modal.Header closeButton>
           <Modal.Title>Modal title</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-        konfirmasi transakasi ?  set status transakasi 
-        </Modal.Body>
+        <Modal.Body>konfirmasi transakasi ? set status transakasi</Modal.Body>
         <Modal.Footer>
           <Button variant="danger" onClick={handleClose}>
             failed
