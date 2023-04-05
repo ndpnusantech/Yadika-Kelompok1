@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import './Sidebar.css'
 
 const Sidebar = ({children}) => {
-    const [isOpen , setisOpen ] = useState(false)
+    const [isOpen , setisOpen ] = useState(true)
 
     const toggle = () => setisOpen(!isOpen)
 

@@ -1,6 +1,19 @@
 import React from "react";
 import TransactionBtn from "../buttons/TransactionBtn";
 import DeleteBtn from "../buttons/DeleteBtn";
+import { GoSearch } from "react-icons/go";
+import {
+  WrapTable,
+  ContentTable,
+  WrapInput,
+  input,
+  Button,
+  WrapTabelOrder,
+  TableOrder,
+  Th,
+  Td,
+  Tr
+} from "./TableElements.jsx";
 import styled from "styled-components";
 function TabelOrder(props) {
   const WrapTable = styled.div`
@@ -129,12 +142,15 @@ function TabelOrder(props) {
   
   `;
 
+function TabelOrder() {
   return (
     <WrapTable>
       <ContentTable>
         <WrapInput>
           <input type="text" placeholder="Search" style={input} />
-          <Button></Button>
+          <Button>
+            <GoSearch />
+          </Button>
         </WrapInput>
       </ContentTable>
       <WrapTabelOrder>

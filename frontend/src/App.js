@@ -44,6 +44,8 @@ const app = () => {
           <Route path="/movieList" element={<MovieList />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/LoginAdmin" element={<LoginAdmin />} />
+          <Route path="/LoginAdmin" element={<LoginAdmin />} />
+
         </Routes>
       </BrowserRouter>
     </section>
