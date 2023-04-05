@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Sidebar from "../../components/admin-components/sidebar/Sidebar";
 import TableList from "../../components/admin-components/table/TableList";
-import AdminProfil from "../../components/admin-components/Adminprofile";
+import AdminProfile from "../../components/admin-components/Adminprofile";
 
 
 const Dashboard = () => {
@@ -18,7 +18,7 @@ const Dashboard = () => {
   return (
     <SectionAdmin>
       <Sidebar>
-        <AdminProfil/>
+        <AdminProfile/>
         <TableList />
       </Sidebar>
     </SectionAdmin>

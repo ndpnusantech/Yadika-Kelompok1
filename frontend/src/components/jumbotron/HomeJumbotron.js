@@ -15,7 +15,7 @@ import { Autoplay, EffectFade, Navigation, Pagination, Keyboard } from "swiper";
 import ContentSwiper from "./ContentSwiper";
 
 const HomeJumbotron = () => {
-  return (
+  return (  
     <div style={{ marginTop: "-90px" }}>
       <Swiper
         effect={"fade"}
