@@ -5,7 +5,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
-function TransactionStatus() {
+function TransactionStatus(props) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -28,18 +28,17 @@ function TransactionStatus() {
       <Accordion defaultActiveKey="0">
         <Card>
           <Card.Header>
-            <CustomToggle eventKey="0">Bukti Pembayaran</CustomToggle>
             <Button
               variant="primary"
               onClick={handleShow}
-              style={{ marginLeft: "5px" }}
+              style={{ marginRight: "5px" }}
             >
-              Status Transaksi
+              Edit Status Transaksi
             </Button>
+            <CustomToggle eventKey="0">Bukti Pembayaran</CustomToggle>
           </Card.Header>
           <Accordion.Collapse eventKey="0">
             <Card.Body>
-              <h6>Bukti pembayaran</h6>
               <img
                 src="./images/contoh bukti pembayaran.jpg"
                 alt=""
@@ -57,15 +56,35 @@ function TransactionStatus() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+          <Modal.Title>set status transakasi</Modal.Title>
         </Modal.Header>
-        <Modal.Body>konfirmasi transakasi ? set status transakasi</Modal.Body>
+        <Modal.Body>
+          <h5> konfirmasi transakasi ? </h5>
+          <div className="mt-4">
+            <button
+              className="btn bg-danger text-white"
+              onClick={props.statusFailed}
+            >
+              failed
+            </button>
+            <button
+              className="btn mx-3 bg-warning"
+              onClick={props.statusPanding}
+            >
+              panding
+            </button>
+            <button
+              className="btn bg-success text-white"
+              onClick={props.statusSuccess}
+            >
+              Success
+            </button>
+          </div>
+        </Modal.Body>
         <Modal.Footer>
-          <Button variant="danger" onClick={handleClose}>
-            failed
+          <Button variant="primary" onClick={handleClose}>
+            Save
           </Button>
-          <Button variant="warning">panding</Button>
-          <Button variant="success">Success</Button>
         </Modal.Footer>
       </Modal>
     </>

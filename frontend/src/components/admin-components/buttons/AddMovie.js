@@ -1,10 +1,8 @@
-import "./buttons.css"
+import "./buttons.css";
 import React from "react";
 
 const AddMovie = () => {
-    return(
-        <button className="AddMovie">Add Movie</button>
-    )
-}
+  return <button className="AddMovie ms-auto">Add Movie</button>;
+};
 
-export default AddMovie
+export default AddMovie;
