@@ -1,10 +1,12 @@
-import "./buttons.css"
+import "./buttons.css";
 import React from "react";
 
-const TransactionBtn = () => {
-    return(
-        <button className="TransactionBtn">Trasaction</button>
-    )
-}
+const TransactionBtn = (props) => {
+  return (
+    <button className="TransactionBtn" onClick={props.onClick}>
+      Trasaction
+    </button>
+  );
+};
 
-export default TransactionBtn
+export default TransactionBtn;
