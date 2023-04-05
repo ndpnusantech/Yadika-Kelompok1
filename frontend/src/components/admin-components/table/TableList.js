@@ -1,6 +1,7 @@
 import React from "react";
 import EditBtn from "../buttons/EditBtn";
 import DeleteBtn from "../buttons/DeleteBtn";
+<<<<<<< HEAD
 import styled from "styled-components";
 import AddMovie from "../buttons/AddMovie";
 import { AiOutlineSearch } from "react-icons/ai";
@@ -152,6 +153,26 @@ function TableList() {
     }
   `;
 
+=======
+import AddMovie from "../buttons/AddMovie";
+import { AiOutlineSearch } from "react-icons/ai";
+import {
+  WrapTable,
+  ContentTable,
+  input,
+  Button,
+  WrapInput,
+  WrapTabelOrder,
+  TableOrder,
+  Th,
+  Td,
+  Tr,
+  PosterFilm,
+  DetailFilm,
+} from "./TableListElements";
+
+function TableList() {
+>>>>>>> 3687aceb5010a02ee49ca8681dec722751c4d834
   return (
     <WrapTable>
       <ContentTable>
@@ -234,6 +255,351 @@ function TableList() {
               <DetailFilm href="/detailFilm">detail</DetailFilm>
             </Td>
           </Tr>
+<<<<<<< HEAD
+=======
+          <Tr>
+            <Td>1</Td>
+            <Td>201</Td>
+            <Td>Ant-man and the Wasp : Quantumania </Td>
+            <Td>
+              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
+            </Td>
+            <Td>2 jam 4 menit</Td>
+            <Td>45.000</Td>
+            <Td>60</Td>
+            <Td>
+              <EditBtn />
+              <DeleteBtn />
+            </Td>
+            <Td>
+              <DetailFilm href="/detailFilm">detail</DetailFilm>
+            </Td>
+          </Tr>
+          <Tr>
+            <Td>1</Td>
+            <Td>201</Td>
+            <Td>Ant-man and the Wasp : Quantumania </Td>
+            <Td>
+              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
+            </Td>
+            <Td>2 jam 4 menit</Td>
+            <Td>45.000</Td>
+            <Td>60</Td>
+            <Td>
+              <EditBtn />
+              <DeleteBtn />
+            </Td>
+            <Td>
+              <DetailFilm href="/detailFilm">detail</DetailFilm>
+            </Td>
+          </Tr>
+          <Tr>
+            <Td>1</Td>
+            <Td>201</Td>
+            <Td>Ant-man and the Wasp : Quantumania </Td>
+            <Td>
+              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
+            </Td>
+            <Td>2 jam 4 menit</Td>
+            <Td>45.000</Td>
+            <Td>60</Td>
+            <Td>
+              <EditBtn />
+              <DeleteBtn />
+            </Td>
+            <Td>
+              <DetailFilm href="/detailFilm">detail</DetailFilm>
+            </Td>
+          </Tr>
+          <Tr>
+            <Td>1</Td>
+            <Td>201</Td>
+            <Td>Ant-man and the Wasp : Quantumania </Td>
+            <Td>
+              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
+            </Td>
+            <Td>2 jam 4 menit</Td>
+            <Td>45.000</Td>
+            <Td>60</Td>
+            <Td>
+              <EditBtn />
+              <DeleteBtn />
+            </Td>
+            <Td>
+              <DetailFilm href="/detailFilm">detail</DetailFilm>
+            </Td>
+          </Tr>
+          <Tr>
+            <Td>1</Td>
+            <Td>201</Td>
+            <Td>Ant-man and the Wasp : Quantumania </Td>
+            <Td>
+              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
+            </Td>
+            <Td>2 jam 4 menit</Td>
+            <Td>45.000</Td>
+            <Td>60</Td>
+            <Td>
+              <EditBtn />
+              <DeleteBtn />
+            </Td>
+            <Td>
+              <DetailFilm href="/detailFilm">detail</DetailFilm>
+            </Td>
+          </Tr>
+          <Tr>
+            <Td>1</Td>
+            <Td>201</Td>
+            <Td>Ant-man and the Wasp : Quantumania </Td>
+            <Td>
+              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
+            </Td>
+            <Td>2 jam 4 menit</Td>
+            <Td>45.000</Td>
+            <Td>60</Td>
+            <Td>
+              <EditBtn />
+              <DeleteBtn />
+            </Td>
+            <Td>
+              <DetailFilm href="/detailFilm">detail</DetailFilm>
+            </Td>
+          </Tr>
+          <Tr>
+            <Td>1</Td>
+            <Td>201</Td>
+            <Td>Ant-man and the Wasp : Quantumania </Td>
+            <Td>
+              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
+            </Td>
+            <Td>2 jam 4 menit</Td>
+            <Td>45.000</Td>
+            <Td>60</Td>
+            <Td>
+              <EditBtn />
+              <DeleteBtn />
+            </Td>
+            <Td>
+              <DetailFilm href="/detailFilm">detail</DetailFilm>
+            </Td>
+          </Tr>
+          <Tr>
+            <Td>1</Td>
+            <Td>201</Td>
+            <Td>Ant-man and the Wasp : Quantumania </Td>
+            <Td>
+              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
+            </Td>
+            <Td>2 jam 4 menit</Td>
+            <Td>45.000</Td>
+            <Td>60</Td>
+            <Td>
+              <EditBtn />
+              <DeleteBtn />
+            </Td>
+            <Td>
+              <DetailFilm href="/detailFilm">detail</DetailFilm>
+            </Td>
+          </Tr>
+          <Tr>
+            <Td>1</Td>
+            <Td>201</Td>
+            <Td>Ant-man and the Wasp : Quantumania </Td>
+            <Td>
+              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
+            </Td>
+            <Td>2 jam 4 menit</Td>
+            <Td>45.000</Td>
+            <Td>60</Td>
+            <Td>
+              <EditBtn />
+              <DeleteBtn />
+            </Td>
+            <Td>
+              <DetailFilm href="/detailFilm">detail</DetailFilm>
+            </Td>
+          </Tr>
+          <Tr>
+            <Td>1</Td>
+            <Td>201</Td>
+            <Td>Ant-man and the Wasp : Quantumania </Td>
+            <Td>
+              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
+            </Td>
+            <Td>2 jam 4 menit</Td>
+            <Td>45.000</Td>
+            <Td>60</Td>
+            <Td>
+              <EditBtn />
+              <DeleteBtn />
+            </Td>
+            <Td>
+              <DetailFilm href="/detailFilm">detail</DetailFilm>
+            </Td>
+          </Tr>
+          <Tr>
+            <Td>1</Td>
+            <Td>201</Td>
+            <Td>Ant-man and the Wasp : Quantumania </Td>
+            <Td>
+              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
+            </Td>
+            <Td>2 jam 4 menit</Td>
+            <Td>45.000</Td>
+            <Td>60</Td>
+            <Td>
+              <EditBtn />
+              <DeleteBtn />
+            </Td>
+            <Td>
+              <DetailFilm href="/detailFilm">detail</DetailFilm>
+            </Td>
+          </Tr>
+          <Tr>
+            <Td>1</Td>
+            <Td>201</Td>
+            <Td>Ant-man and the Wasp : Quantumania </Td>
+            <Td>
+              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
+            </Td>
+            <Td>2 jam 4 menit</Td>
+            <Td>45.000</Td>
+            <Td>60</Td>
+            <Td>
+              <EditBtn />
+              <DeleteBtn />
+            </Td>
+            <Td>
+              <DetailFilm href="/detailFilm">detail</DetailFilm>
+            </Td>
+          </Tr>
+          <Tr>
+            <Td>1</Td>
+            <Td>201</Td>
+            <Td>Ant-man and the Wasp : Quantumania </Td>
+            <Td>
+              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
+            </Td>
+            <Td>2 jam 4 menit</Td>
+            <Td>45.000</Td>
+            <Td>60</Td>
+            <Td>
+              <EditBtn />
+              <DeleteBtn />
+            </Td>
+            <Td>
+              <DetailFilm href="/detailFilm">detail</DetailFilm>
+            </Td>
+          </Tr>
+          <Tr>
+            <Td>1</Td>
+            <Td>201</Td>
+            <Td>Ant-man and the Wasp : Quantumania </Td>
+            <Td>
+              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
+            </Td>
+            <Td>2 jam 4 menit</Td>
+            <Td>45.000</Td>
+            <Td>60</Td>
+            <Td>
+              <EditBtn />
+              <DeleteBtn />
+            </Td>
+            <Td>
+              <DetailFilm href="/detailFilm">detail</DetailFilm>
+            </Td>
+          </Tr>
+          <Tr>
+            <Td>1</Td>
+            <Td>201</Td>
+            <Td>Ant-man and the Wasp : Quantumania </Td>
+            <Td>
+              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
+            </Td>
+            <Td>2 jam 4 menit</Td>
+            <Td>45.000</Td>
+            <Td>60</Td>
+            <Td>
+              <EditBtn />
+              <DeleteBtn />
+            </Td>
+            <Td>
+              <DetailFilm href="/detailFilm">detail</DetailFilm>
+            </Td>
+          </Tr>
+          <Tr>
+            <Td>1</Td>
+            <Td>201</Td>
+            <Td>Ant-man and the Wasp : Quantumania </Td>
+            <Td>
+              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
+            </Td>
+            <Td>2 jam 4 menit</Td>
+            <Td>45.000</Td>
+            <Td>60</Td>
+            <Td>
+              <EditBtn />
+              <DeleteBtn />
+            </Td>
+            <Td>
+              <DetailFilm href="/detailFilm">detail</DetailFilm>
+            </Td>
+          </Tr>
+          <Tr>
+            <Td>1</Td>
+            <Td>201</Td>
+            <Td>Ant-man and the Wasp : Quantumania </Td>
+            <Td>
+              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
+            </Td>
+            <Td>2 jam 4 menit</Td>
+            <Td>45.000</Td>
+            <Td>60</Td>
+            <Td>
+              <EditBtn />
+              <DeleteBtn />
+            </Td>
+            <Td>
+              <DetailFilm href="/detailFilm">detail</DetailFilm>
+            </Td>
+          </Tr>
+          <Tr>
+            <Td>1</Td>
+            <Td>201</Td>
+            <Td>Ant-man and the Wasp : Quantumania </Td>
+            <Td>
+              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
+            </Td>
+            <Td>2 jam 4 menit</Td>
+            <Td>45.000</Td>
+            <Td>60</Td>
+            <Td>
+              <EditBtn />
+              <DeleteBtn />
+            </Td>
+            <Td>
+              <DetailFilm href="/detailFilm">detail</DetailFilm>
+            </Td>
+          </Tr>
+          <Tr>
+            <Td>1</Td>
+            <Td>201</Td>
+            <Td>Ant-man and the Wasp : Quantumania </Td>
+            <Td>
+              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
+            </Td>
+            <Td>2 jam 4 menit</Td>
+            <Td>45.000</Td>
+            <Td>60</Td>
+            <Td>
+              <EditBtn />
+              <DeleteBtn />
+            </Td>
+            <Td>
+              <DetailFilm href="/detailFilm">detail</DetailFilm>
+            </Td>
+          </Tr>
+>>>>>>> 3687aceb5010a02ee49ca8681dec722751c4d834
         </TableOrder>
       </WrapTabelOrder>
     </WrapTable>
