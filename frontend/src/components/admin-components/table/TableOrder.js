@@ -12,10 +12,10 @@ import {
   TableOrder,
   Th,
   Td,
-  Tr
+  Tr,
 } from "./TableElements.jsx";
+
 function TabelOrder(props) {
-  
   return (
     <WrapTable>
       <ContentTable>

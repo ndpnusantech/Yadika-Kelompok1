@@ -112,6 +112,8 @@ const Orders = () => {
     setShow(false);
   };
 
+  const [status, setStatus] = useState("");
+
   return (
     <SectionAdmin>
       <Sidebar>
@@ -169,6 +171,11 @@ const Orders = () => {
                     <Td>:</Td>
                     <Td>3</Td>
                   </tr>
+                  <tr>
+                    <Td>Status Transaksi</Td>
+                    <Td>:</Td>
+                    <Td>{status}</Td>
+                  </tr>
                 </table>
               </WrapAdmin>
 
@@ -194,7 +201,6 @@ const Orders = () => {
                         <p>Date : mm/dd/yy</p>
                         <p>Time : 00:00 PM</p>
                         <p>Row : A Seat : 3</p>
-                        <p>Status Transaksi</p>
                       </div>
                       <div className="logoCgv">
                         <LogoCgv src="./images/logo/cgv.png" alt="" />
@@ -206,7 +212,20 @@ const Orders = () => {
                 </TiketCustomers>
               </WrapTiket>
             </Wrap>
-            <TransactionStatus />
+            <TransactionStatus
+              statusFailed={() => {
+                localStorage.setItem("status", "Failed");
+                setStatus("Failed");
+              }}
+              statusSuccess={() => {
+                localStorage.setItem("status", "Success");
+                setStatus("Success");
+              }}
+              statusPanding={() => {
+                localStorage.setItem("status", "Panding");
+                setStatus("Panding");
+              }}
+            />
           </TransactionInfo>
         )}
 

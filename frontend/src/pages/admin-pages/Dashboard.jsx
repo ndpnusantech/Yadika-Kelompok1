@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import BarChart from "../../components/admin-components/chart/BarChart";
-import PieChart from "../../components/admin-components/chart/PieChart";
+import LineChart from "../../components/admin-components/chart/LineChart";
 import Sidebar from "../../components/admin-components/sidebar/Sidebar";
 import AdminProfile from "../../components/admin-components/Adminprofile";
+import InfoTicket from "../../components/admin-components/Card/InfoTicket";
 
 const Dashboard = () => {
   const SectionAdmin = styled.section`
@@ -19,7 +19,12 @@ const Dashboard = () => {
     <SectionAdmin>
       <Sidebar>
         <AdminProfile />
-        <PieChart />
+        <div className="d-flex justify-content-center">
+          <InfoTicket bg="43B262" title="Jumlah Ticket Terjual" jumlah="2000" />
+          <InfoTicket bg="FD6464" title="Jumlah Ticket Tersisa" jumlah="2000" />
+          <InfoTicket bg="886AFD" title="Jumlah Ticket" jumlah="4000" />
+        </div>
+        <LineChart />
       </Sidebar>
     </SectionAdmin>
   );

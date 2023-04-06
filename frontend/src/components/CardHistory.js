@@ -44,6 +44,11 @@ const CardHistory = () => {
             <td>:</td>
             <td>3</td>
           </tr>
+          <tr>
+            <td>Status Transaksi</td>
+            <td>:</td>
+            <td>{localStorage.getItem("status")}</td>
+          </tr>
         </table>
       </div>
       <Ticket />
