@@ -5,13 +5,8 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import "./Sidebar.css";
 
-<<<<<<< HEAD
 const Sidebar = ({ children }) => {
-  const [isOpen, setisOpen] = useState(false);
-=======
-const Sidebar = ({children}) => {
-    const [isOpen , setisOpen ] = useState(true)
->>>>>>> 3687aceb5010a02ee49ca8681dec722751c4d834
+  const [isOpen, setisOpen] = useState(true);
 
   const toggle = () => setisOpen(!isOpen);
 

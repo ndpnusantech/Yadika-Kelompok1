@@ -31,15 +31,6 @@
 }
 /* button AddMovie */
 
-.AddMovie {
-  background-color: #377de5;
-  color: white;
-  border: 0px;
-  border-radius: 15px;
-  padding: 2px 11px;
-  font-size: 13px;
-}
-
 .AddMovie:hover {
   background-color: #528de6;
 }
