@@ -15,43 +15,43 @@ const ContentChart = () => {
     {
       name: "Januari",
       Ticket: 4000,
-      Bulan: 2400,
+      Income: 2400,
       amt: 2400,
     },
     {
       name: "Februari",
       Ticket: 3000,
-      Bulan: 1398,
+      Income: 1398,
       amt: 2210,
     },
     {
       name: "Maret",
       Ticket: 2000,
-      Bulan: 9800,
+      Income: 9800,
       amt: 2290,
     },
     {
       name: "April",
       Ticket: 2780,
-      Bulan: 3908,
+      Income: 3908,
       amt: 2000,
     },
     {
       name: "Mei",
       Ticket: 1890,
-      Bulan: 4800,
+      Income: 4800,
       amt: 2181,
     },
     {
       name: "Juni",
       Ticket: 2390,
-      Bulan: 3800,
+      Income: 3800,
       amt: 2500,
     },
     {
       name: "Juli",
       Ticket: 3490,
-      Bulan: 4300,
+      Income: 4300,
       amt: 2100,
     },
   ];
@@ -84,7 +84,7 @@ const ContentChart = () => {
           stroke="#8884d8"
           activeDot={{ r: 8 }}
         />
-        <Line type="monotone" dataKey="Bulan" stroke="#82ca9d" />
+        <Line type="monotone" dataKey="Income" stroke="#82ca9d" />
       </LineChart>
     </ResponsiveContainer>
   );

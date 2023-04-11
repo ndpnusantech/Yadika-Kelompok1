@@ -20,9 +20,23 @@ const Dashboard = () => {
       <Sidebar>
         <AdminProfile />
         <div className="d-flex justify-content-center">
-          <InfoTicket bg="43B262" title="Jumlah Ticket Terjual" jumlah="2000" />
-          <InfoTicket bg="FD6464" title="Jumlah Ticket Tersisa" jumlah="2000" />
-          <InfoTicket bg="886AFD" title="Jumlah Ticket" jumlah="4000" />
+          <InfoTicket
+            bgPattern="jumlah-terjual"
+            title="Jumlah Ticket Terjual"
+            jumlah="2000"
+            totalPrice="Total : Rp 1.200.000"
+            loader="money-animate"
+          />
+          <InfoTicket
+            bgPattern="jumlah-tersisa"
+            title="Jumlah Ticket Tersisa"
+            jumlah="2000"
+          />
+          <InfoTicket
+            bgPattern="jumlah-ticket"
+            title="Jumlah Ticket"
+            jumlah="4000"
+          />
         </div>
         <LineChart />
       </Sidebar>
