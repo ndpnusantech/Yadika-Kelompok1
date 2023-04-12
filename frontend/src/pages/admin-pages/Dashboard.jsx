@@ -45,6 +45,7 @@ const Dashboard = () => {
         </div>
         <LineChart />
         </div>
+        </div>
       </Sidebar>
     </SectionAdmin>
   );
