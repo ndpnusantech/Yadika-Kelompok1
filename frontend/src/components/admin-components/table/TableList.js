@@ -15,11 +15,15 @@ import {
   Tr,
   PosterFilm,
   DetailFilm,
+  InputNumber,
 } from "./TableListElements";
 
 import "./style.css";
 
 import Modal from "react-bootstrap/Modal";
+import styled from "styled-components";
+// Tabs
+import TabComponent from "../tabs/Tab";
 
 function TableList() {
   const [showFilter, setShowFilter] = useState(false);
@@ -32,6 +36,27 @@ function TableList() {
   const handleCloseAdd = () => setShowAdd(false);
   const handleShowAdd = () => setShowAdd(true);
 
+  // input type number tiket
+  const [count, setCount] = useState(0);
+
+  function incrementCount(e) {
+    e.preventDefault();
+
+    setCount((prevCount) => prevCount + 1);
+  }
+  function decrementCount(e) {
+    e.preventDefault();
+    if (!count < 1) {
+      setCount((prevCount) => prevCount - 1);
+    }
+    return false;
+  }
+
+  function handleChange(e) {
+    const newCount = Number(e.target.count);
+    setCount((prevCount) => newCount);
+  }
+
   // style option
   const optionStyle = {
     padding: "5px",
@@ -41,7 +66,6 @@ function TableList() {
     cursor: "pointer",
     borderRadius: "5px",
   };
-  // end
   return (
     <WrapTable>
       <ContentTable>
@@ -120,51 +144,144 @@ function TableList() {
           </button>
           {/* Modal */}
 
-          <Modal show={showAdd} onHide={handleCloseAdd} size="xl">
-            <Modal.Header closeButton>
-              <Modal.Title>Add Movie List</Modal.Title>
+          <Modal
+            show={showAdd}
+            onHide={handleCloseAdd}
+            size="lg"
+            style={{ fontWeight: "bold" }}
+          >
+            <Modal.Header style={{ padding: "9px  0px" }}>
+              <h6
+                style={{
+                  textAlign: "center",
+                  margin: "auto",
+                  fontWeight: "bold",
+                }}
+              >
+                Add Movie list
+              </h6>
+              <img
+                src="./images/logo/cgv.png"
+                alt=""
+                style={{ width: "55px", position: "absolute", right: "20px" }}
+              />
             </Modal.Header>
             <Modal.Body>
               <div>
                 <form action="" className="add-movie">
-                  <table>
-                    <tr>
-                      <td>Nama Film</td>
-                      <td>:</td>
-                      <td>
-                        <input type="text" name="" id="" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Nama Film</td>
-                      <td>:</td>
-                      <td>
-                        <input type="text" name="" id="" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Nama Film</td>
-                      <td>:</td>
-                      <td>
-                        <input type="text" name="" id="" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Nama Film</td>
-                      <td>:</td>
-                      <td>
-                        <input type="text" name="" id="" />
-                      </td>
-                    </tr>
-                  </table>
+                  <div
+                    style={{
+                      fontSize: "12px",
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <table>
+                      <tr>
+                        <td>Nama Film</td>
+                        <td>:</td>
+                        <td>
+                          <input
+                            type="text"
+                            name=""
+                            id=""
+                            style={{
+                              width: "220px",
+                            }}
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Durasi film</td>
+                        <td>:</td>
+                        <td>
+                          <input
+                            type="text"
+                            name=""
+                            id=""
+                            style={{
+                              width: "220px",
+                            }}
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Harga tiket</td>
+                        <td>:</td>
+                        <td>
+                          <input
+                            type="text"
+                            name=""
+                            id=""
+                            style={{
+                              width: "220px",
+                            }}
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Jumlah tiket </td>
+                        <td>:</td>
+                        <td>
+                          <InputNumber>
+                            <button
+                              onClick={incrementCount}
+                              className="plus-button"
+                            >
+                              +
+                            </button>
+                            {/* <div>{count}</div> */}
+                            <input
+                              type="number"
+                              className="input-number"
+                              id="input-number"
+                              value={count}
+                              onChange={handleChange}
+                            />
+                            <button
+                              onClick={decrementCount}
+                              className="min-button"
+                            >
+                              -
+                            </button>
+                          </InputNumber>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <table>
+                      <tr>
+                        <td>Durasi penayangan</td>
+                        <td>:</td>
+                        <td>
+                          <input type="date" name="" id="" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Sampai dengan</td>
+                        <td>:</td>
+                        <td>
+                          <input type="date" name="" id="" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                          <textarea
+                            style={{
+                              width: "220px",
+                              height: "100px",
+                            }}
+                          ></textarea>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <TabComponent />
                 </form>
               </div>
             </Modal.Body>
-            <Modal.Footer>
-              <Button variant="primary" onClick={handleCloseAdd}>
-                Add Movie
-              </Button>
-            </Modal.Footer>
           </Modal>
 
           {/* End */}
