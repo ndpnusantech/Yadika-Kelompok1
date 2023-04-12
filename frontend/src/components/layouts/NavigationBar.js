@@ -16,9 +16,12 @@ const NavigationBar = () => {
         <Nav className="ms-auto">
           <Link to={"/"}>Home</Link>
           <Link to={"/nowshowing"}>Now Showing</Link>
-          <Link to={"/history"} className="me-5">
-            History
-          </Link>
+          <Link to={"/upcoming"}>Up Coming </Link>
+          {isLogin && (
+            <Link to={"/history"} className="me-5">
+              History
+            </Link>
+          )}
           {isLogin ? (
             <Link to={"/profile"}>
               <img src="./images/user.png" alt="" style={{ width: "30px" }} />

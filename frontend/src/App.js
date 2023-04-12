@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/style.css";
 import "./styles/swiper.css";
 import "./styles/animate.css";
+import "./styles/css-pattern/CardInfoTicket.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -45,7 +46,6 @@ const app = () => {
           <Route path="/orders" element={<Orders />} />
           <Route path="/LoginAdmin" element={<LoginAdmin />} />
           <Route path="/LoginAdmin" element={<LoginAdmin />} />
-
         </Routes>
       </BrowserRouter>
     </section>
