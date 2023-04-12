@@ -9,7 +9,17 @@ const Sonnet = () => {
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
       rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     padding: 20px;
-    width : 100% ;
+    width : 750px ;
+    min-width : 400px;
+
+    @media only screen and (max-width: 990px) {
+      width : 460px ;
+    }
+   
+    @media only screen and (max-width: 574px) {
+      width : 100% ;
+    }
+    
     
     .hour-btn{
         border : 0px;
