@@ -93,7 +93,7 @@ const Sidebar = ({ children }) => {
         ))}
       </Sidebar>
       <div
-        style={{ width: isOpen ? "300px" : "50px", transition: "all 0.5s" }}
+        style={{ width: isOpen ? "300px" : "50px" , transition: "all 0.5s"   }}
       ></div>
       <main style={{ width: "100%" }}>{children}</main>
     </div>
