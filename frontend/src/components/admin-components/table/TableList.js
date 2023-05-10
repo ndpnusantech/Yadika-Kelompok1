@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import EditBtn from "../buttons/EditBtn";
 import DeleteBtn from "../buttons/DeleteBtn";
-import DetailFilmButton from "./DetailFilm";
+import DetailFilmButton from "./DetailMovie";
 import { AiOutlineSearch } from "react-icons/ai";
 import {
   WrapTable,
@@ -15,13 +15,11 @@ import {
   Td,
   Tr,
   PosterFilm,
-  DetailFilm,
 } from "./TableListElements";
 
 import "./style.css";
-
-import Modal from "react-bootstrap/Modal";
-import { Card } from "react-bootstrap";
+import ModalFilter from "../modal/ModalFilter";
+import AddMovie from "../modal/AddMovie";
 
 function TableList() {
   const [showFilter, setShowFilter] = useState(false);
