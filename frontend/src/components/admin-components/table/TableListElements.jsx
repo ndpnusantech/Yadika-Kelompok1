@@ -7,6 +7,10 @@ export const WrapTable = styled.div`
   background-color: #f8f6ee;
   margin: auto;
   font-size: 13px;
+
+
+ 
+  
 `;
 export const ContentTable = styled.div`
   padding: 10px;
@@ -144,3 +148,38 @@ export const DetailFilm = styled.a`
     color: black;
   }
 `;
+
+
+ // input jumlah tiket 
+  
+ export const InputNumber = styled.div`
+ background-color: black;
+ width: max-content;
+ border-radius: 5px;
+ 
+ .input-number {
+   width: 50px;
+   border: none;
+   border-radius: 5px;
+   text-align: center;
+ }
+ 
+ .plus-button,
+   .min-button {
+     border: none;
+     width: 20px;
+     text-align: center;
+     padding: 2px;
+     background: black;
+     border-radius: 4px;
+     color: white;
+   }
+   
+   input[type="number"]::-webkit-inner-spin-button,
+   input[type="number"]::-webkit-outer-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+   }
+   `;
+   
+   // end
