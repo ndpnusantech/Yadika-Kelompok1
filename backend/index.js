@@ -1,11 +1,12 @@
-import express from "express";
-import cors from "cors";
-import MovieRouter from "./routes/MovieRoute.js";
+const express = require("express");
+const cors = require("cors");
+const MovieRoute = require("./routers/MovieRoute");
+
+const PORT = 5000;
 
 const app = express();
-
 app.use(cors());
 app.use(express.json());
-app.use(MovieRouter);
+app.use(MovieRoute);
 
-app.listen(5000, () => console.log("server up and running on port 5000 ..."));
+app.listen(PORT, () => console.log("server up and running"));
