@@ -18,7 +18,6 @@ import {
   InputNumber,
 } from "./TableListElements";
 
-import "./style.css";
 
 import Modal from "react-bootstrap/Modal";
 import styled from "styled-components";
