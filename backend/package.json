@@ -11,10 +11,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "argon2": "^0.28.7",
     "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "mysql2": "^3.2.0",
-    "nodemon": "^2.0.22",
-    "sequelize": "^6.30.0"
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "expfileuploadress-": "^1.4.0",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.3",
+    "uuid": "^9.0.0"
   }
 }

@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize";
 
-const db = new Sequelize("cinemaid_db", "root", "141105", {
+const db = new Sequelize("cinemaid_db", "root", "", {
   host: "localhost",
   dialect: "mysql",
 });
