@@ -1,12 +1,41 @@
-const express = require("express");
-const cors = require("cors");
-const MovieRoute = require("./routers/MovieRoute");
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import db from "./config/Database.js";
+import MovieRoute from './routes/MovieRoute.js'
+// file upload
+import fileUpload from "express-fileupload";
 
-const PORT = 5000;
+dotenv.config();
 
 const app = express();
-app.use(cors());
+
+
+
+// membuat table otomatis
+
+(async()=>{
+    await db.sync();
+})();
+
+
+
+app.use(
+  cors({
+    credentials: true,
+    origin: "http://localhost:3000",
+  })
+);
+
+
 app.use(express.json());
+app.use(fileUpload());
+app.use(express.static("public"));
 app.use(MovieRoute);
 
-app.listen(PORT, () => console.log("server up and running"));
+
+// store.sync();
+
+app.listen(process.env.APP_PORT, () => {
+  console.log("Server up and running...");
+});
