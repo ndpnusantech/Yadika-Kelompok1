@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(fileUpload());
 app.use(express.static("public"));
 app.use(MovieRoute);
-
+// 
 // store.sync();
 
 app.listen(process.env.APP_PORT, () => {
