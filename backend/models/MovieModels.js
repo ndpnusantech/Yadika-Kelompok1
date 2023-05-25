@@ -1,26 +1,124 @@
-const Sequelize = require("sequelize");
-const db = require("../config/databaseMovie");
+import { Sequelize } from "sequelize";
+import db from "../config/databaseMovie.js";
 
 const { DataTypes } = Sequelize;
 
 const Movie = db.define(
   "movies",
   {
-    title: DataTypes.STRING,
-    sinopsis: DataTypes.TEXT,
-    duration: DataTypes.STRING,
-    is_show: DataTypes.BOOLEAN,
-    normal_price: DataTypes.FLOAT,
-    weekend_price: DataTypes.FLOAT,
-    special_price: DataTypes.FLOAT,
-    stok_ticket: DataTypes.INTEGER,
-    poster: DataTypes.TEXT,
-    bg_poster: DataTypes.TEXT,
-    trailer: DataTypes.TEXT,
-    start_show: DataTypes.DATE,
-    end_show: DataTypes.DATE,
-    is_slider: DataTypes.BOOLEAN,
-    status: DataTypes.BOOLEAN,
+    uuid: {
+      type: DataTypes.STRING,
+      defaultValue: DataTypes.UUIDV4,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+    sinopsis: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+    duration: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+    is_show: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+    normal_price: {
+      type: DataTypes.FLOAT,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+    weekend_price: {
+      type: DataTypes.FLOAT,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+    special_price: {
+      type: DataTypes.FLOAT,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+    stok_ticket: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+    poster: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+    bg_poster: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+    trailer: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+    start_show: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+    end_show: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+    is_slider: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+    status: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
   },
   {
     freezeTableName: true,
@@ -31,4 +129,4 @@ const Movie = db.define(
   await db.sync();
 })();
 
-module.exports = Movie;
+export default Movie;
