@@ -1,9 +1,18 @@
-const express = require("express");
-const { getMovies, getMovieById } = require("../controllers/MovieController");
+import express from "express";
+import {
+  createMovie,
+  deleteMovie,
+  getMovie,
+  getMovieById,
+  updateMovie,
+} from "../controllers/MovieController.js";
 
 const router = express.Router();
 
-router.get("/movies", getMovies);
+router.get("/movies", getMovie);
 router.get("/movies/:id", getMovieById);
+router.post("/movies", createMovie);
+router.patch("/movies/:id", updateMovie);
+router.delete("/movies/:id", deleteMovie);
 
-module.exports = router;
+export default router;
