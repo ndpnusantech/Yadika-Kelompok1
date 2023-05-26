@@ -6,3 +6,4 @@ const db = new Sequelize("movie_db", "root", "", {
 });
 
 export default db;
+  

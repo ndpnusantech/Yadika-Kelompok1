@@ -71,14 +71,28 @@ const Movie = db.define(
       },
     },
     poster: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+    poster_url: {
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         notEmpty: true,
       },
     },
     bg_poster: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+    bg_poster_url: {
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         notEmpty: true,
@@ -125,8 +139,8 @@ const Movie = db.define(
   }
 );
 
-(async () => {
-  await db.sync();
-})();
+// (async () => {
+//   await db.sync();
+// })();
 
 export default Movie;
