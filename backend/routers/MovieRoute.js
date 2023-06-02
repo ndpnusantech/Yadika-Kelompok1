@@ -1,11 +1,11 @@
-import express from "express";
-import {
+const express = require("express");
+const {
   createMovie,
   deleteMovie,
   getMovie,
   getMovieById,
   updateMovie,
-} from "../controllers/MovieController.js";
+} = require("../controllers/MovieController.js");
 
 const router = express.Router();
 
@@ -15,4 +15,4 @@ router.post("/movies", createMovie);
 router.patch("/movies/:id", updateMovie);
 router.delete("/movies/:id", deleteMovie);
 
-export default router;
+module.exports = router;
