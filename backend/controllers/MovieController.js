@@ -57,8 +57,6 @@ export const createMovie = async (req, res) => {
 
   if (!allowedType.includes(ext.toLowerCase()))
     return res.status(422).json({ msg: "invalid images" });
-
- 
     const maxSize = 10000000; // dalam basis 10;p/
     // const maxSize = 3 * 1024 * 1024; // dalam basis 2
   if (fileSize > maxSize)
