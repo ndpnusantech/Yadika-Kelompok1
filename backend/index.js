@@ -1,11 +1,15 @@
-import express from "express";
-import cors from "cors";
-import dotenv from "dotenv";
+const express = require("express");
+const cors = require("cors");
+const dotenv = require("dotenv");
 // file upload
-import fileUpload from "express-fileupload";
-import MovieRoute from "./routers/MovieRoute.js";
+const fileUpload = require("express-fileupload");
+const MovieRoute = require("./routers/MovieRoute.js");
+const CityRoute = require("./routers/CityRoute.js");
+const CgvRoute = require("./routers/CgvRoute.js");
 
 dotenv.config();
+
+const PORT = process.env.PORT;
 
 const app = express();
 
@@ -13,10 +17,14 @@ app.use(cors());
 app.use(express.json());
 app.use(fileUpload());
 app.use(express.static("public"));
+// Router
 app.use(MovieRoute);
-// 
+// app.use(CityRoute);
+app.use(CityRoute);
+app.use(CgvRoute);
+
 // store.sync();
 
-app.listen(process.env.APP_PORT, () => {
-  console.log(`Server up and running on PORT ${process.env.APP_PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server up and running on PORT ${PORT}`);
 });

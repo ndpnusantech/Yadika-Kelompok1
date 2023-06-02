@@ -1,21 +1,22 @@
-import Movie from "../models/MovieModels.js";
-import path from "path";
-import crypto from "crypto";
-import fs from 'fs'
+const path = require("path");
+const crypto = require("crypto");
 
-export const getMovie = async (req, res) => {
+const { Cgv, Movie } = require("../helper/relation");
+
+exports.getMovie = async (req, res) => {
   try {
     const response = await Movie.findAll();
-    res.status(200).json(response);
+    res.status(200).json({ data: response });
   } catch (error) {
     console.log(error.message);
   }
 };
 
-export const getMovieById = async (req, res) => {
+exports.getMovieById = async (req, res) => {
   try {
     const response = await Movie.findOne({
       where: req.body.id,
+      include: [{ model: Cgv }],
     });
     res.status(200).json(response);
   } catch (error) {
@@ -23,7 +24,7 @@ export const getMovieById = async (req, res) => {
   }
 };
 
-export const createMovie = async (req, res) => {
+exports.createMovie = async (req, res) => {
   const {
     title,
     sinopsis,
@@ -38,33 +39,34 @@ export const createMovie = async (req, res) => {
     end_show,
     is_slider,
     status,
+    cgvId,
   } = req.body;
 
-  if (!title) {
-    return res.status(400).json({ msg: "Masukan nama film" });
-  } else if (!sinopsis) {
-    return res.status(400).json({ msg: "Masukan sinopsis " });
-  } else if (!is_show) {
-    return res.status(400).json({ msg: "Masukan is show" });
-  } else if (!normal_price) {
-    return res.status(400).json({ msg: "masukan harga tiket normal" });
-  } else if (!weekend_price) {
-    return res.status(400).json({ msg: "masukan harga tiket weekend " });
-  } else if (!special_price) {
-    return res.status(400).json({ msg: "masukan harga tiket sepesial" });
-  } else if (!stok_ticket) {
-    return res.status(400).json({ msg: "Masukan stok tiket film" });
-  } else if (!trailer) {
-    return res.status(400).json({ msg: "Masukkan link trailer film" });
-  }
-  if (req.files === null || req.files.lengtgh < 2) {
+  // if (!title) {
+  //   return res.status(400).json({ msg: "Masukan nama film" });
+  // } else if (!sinopsis) {
+  //   return res.status(400).json({ msg: "Masukan sinopsis " });
+  // } else if (!is_show) {
+  //   return res.status(400).json({ msg: "Masukan is show" });
+  // } else if (!normal_price) {
+  //   return res.status(400).json({ msg: "masukan harga tiket normal" });
+  // } else if (!weekend_price) {
+  //   return res.status(400).json({ msg: "masukan harga tiket weekend " });
+  // } else if (!special_price) {
+  //   return res.status(400).json({ msg: "masukan harga tiket sepesial" });
+  // } else if (!stok_ticket) {
+  //   return res.status(400).json({ msg: "Masukan stok tiket film" });
+  // } else if (!trailer) {
+  //   return res.status(400).json({ msg: "Masukkan link trailer film" });
+  // }
+  if (req.files === null || req.files.length < 2) {
     return res
       .status(400)
       .json({ msg: "Masukkan poster dan bacground poster" });
   }
 
   const posterFile = req.files.poster; // File poster
-  const bgPosterFile = req.files.bgPoster; // File bgPosterFile
+  const bgPosterFile = req.files.bg_poster; // File bgPosterFile
 
   // Proses upload poster file
   const posterTimestamp = Date.now();
@@ -73,8 +75,8 @@ export const createMovie = async (req, res) => {
   const posterFileName = `${posterTimestamp}-${posterRandomString}${posterExt}`;
   const posterUrl = `${req.protocol}://${req.get(
     "host"
-  )}/movie-posters/${posterFileName}`;
-  const posterPath = `./public/movie-posters/${posterFileName}`;
+  )}/assets/posters/${posterFileName}`;
+  const posterPath = `./public/assets/posters/${posterFileName}`;
 
   // Proses upload bg poster file
   const bgPosterTimestamp = Date.now();
@@ -83,8 +85,8 @@ export const createMovie = async (req, res) => {
   const bgPosterFileName = `${bgPosterTimestamp}-${bgPosterRandomString}${bgPosterExt}`;
   const bgPosterUrl = `${req.protocol}://${req.get(
     "host"
-  )}/movie-bgPosterFiles/${bgPosterFileName}`;
-  const bgPosterPath = `./public/bg-posters/${bgPosterFileName}`;
+  )}/assets/bgPosters/${bgPosterFileName}`;
+  const bgPosterPath = `./public/assets/bgPosters/${bgPosterFileName}`;
 
   // tipe data yang di izinkan
   const allowedType = [".png", ".jpg", ".jpeg"];
@@ -136,6 +138,7 @@ export const createMovie = async (req, res) => {
           end_show,
           is_slider,
           status,
+          cgvId,
         });
 
         res.status(201).json({ msg: "Movie Created" });
@@ -146,24 +149,14 @@ export const createMovie = async (req, res) => {
   });
 };
 
-export const updateMovie = async (req, res) => {};
+exports.updateMovie = async (req, res) => {};
 
-export const deleteMovie = async (req, res) => {
+exports.deleteMovie = async (req, res) => {
   try {
-    const movie = await Movie.findOne({
-      where: {
-        uuid: req.params.id,
-      },
-    });
-
-    if (!movie) {
-      return res.status(406).json({ msg: "film tidak ditemukan" });
-    }
-
     // hapus filenya belum
-    await movie.destroy({
+    await Movie.destroy({
       where: {
-        id: movie.id,
+        id: req.params.id,
       },
     });
 
