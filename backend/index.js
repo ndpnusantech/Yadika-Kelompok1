@@ -1,41 +1,30 @@
-import express from "express";
-import cors from "cors";
-import dotenv from "dotenv";
-import db from "./config/Database.js";
-import MovieRoute from './routes/MovieRoute.js'
+const express = require("express");
+const cors = require("cors");
+const dotenv = require("dotenv");
 // file upload
-import fileUpload from "express-fileupload";
+const fileUpload = require("express-fileupload");
+const MovieRoute = require("./routers/MovieRoute.js");
+const CityRoute = require("./routers/CityRoute.js");
+const CgvRoute = require("./routers/CgvRoute.js");
 
 dotenv.config();
 
+const PORT = process.env.PORT;
+
 const app = express();
 
-
-
-// membuat table otomatis
-
-(async()=>{
-    await db.sync();
-})();
-
-
-
-app.use(
-  cors({
-    credentials: true,
-    origin: "http://localhost:3000",
-  })
-);
-
-
+app.use(cors());
 app.use(express.json());
 app.use(fileUpload());
 app.use(express.static("public"));
+// Router
 app.use(MovieRoute);
-
+// app.use(CityRoute);
+app.use(CityRoute);
+app.use(CgvRoute);
 
 // store.sync();
 
-app.listen(process.env.APP_PORT, () => {
-  console.log("Server up and running...");
+app.listen(PORT, () => {
+  console.log(`Server up and running on PORT ${PORT}`);
 });

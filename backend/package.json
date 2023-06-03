@@ -2,7 +2,6 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,9 +14,10 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "expfileuploadress-": "^1.4.0",
+    "express-fileupload": "^1.4.0",
     "mysql2": "^2.3.3",
     "sequelize": "^6.21.3",
+    "sequelize-cli": "^6.6.0",
     "uuid": "^9.0.0"
   }
 }
