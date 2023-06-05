@@ -164,4 +164,4 @@ exports.deleteMovie = async (req, res) => {
   } catch (error) {
     console.log(error.message);
   }
-};
+ };
