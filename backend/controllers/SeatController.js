@@ -1,87 +1,56 @@
-const { Seat } = require("../helper/relation.js");
+const { Seat, Audi } = require("../helper/relation.js");
 
 // Membuat seat baru
-async function createSeat(seatNumber, isBook, audiId) {
+exports.createSeat = async (req, res) => {
   try {
-    const seat = await Seat.create({
+    const { seatNumber, isBook, audiId } = req.body;
+    const response = await Seat.create({
       seatNumber,
       isBook,
       audiId,
     });
-    console.log('Seat created:', seat.toJSON());
+    res.status(201).json(response);
   } catch (error) {
-    console.error('Error creating seat:', error);
+    console.log(error);
   }
-}
+};
 
 // Mengambil semua seat
-async function getAllSeats() {
+exports.getSeats = async (req, res) => {
   try {
-    const seats = await Seat.findAll();
-    console.log('Seats:', seats);
+    const response = await Seat.findAll({});
+    res.status(200).json(response);
   } catch (error) {
-    console.error('Error retrieving seats:', error);
+    console.log(error);
   }
-}
+};
 
 // Mengambil seat berdasarkan audiId
-async function getSeatsByAudiId(audiId) {
+exports.getSeatById = async (req, res) => {
   try {
-    const seats = await Seat.findAll({
+    const response = await Seat.findOne({
+      include: [{ model: Audi }],
       where: {
-        audiId,
+        id: req.params.id,
       },
     });
-    console.log(`Seats in Audi ${audiId}:`, seats);
+    res.status(200).json(response);
   } catch (error) {
-    console.error(`Error retrieving seats in Audi ${audiId}:`, error);
+    console.log(error);
   }
-}
-
+};
 // Mengupdate status isBook seat berdasarkan seatNumber
-async function updateSeatStatus(seatNumber, isBook) {
-  try {
-    const seat = await Seat.findOne({
-      where: {
-        seatNumber,
-      },
-    });
-
-    if (seat) {
-      seat.isBook = isBook;
-      await seat.save();
-      console.log('Seat updated:', seat.toJSON());
-    } else {
-      console.log(`Seat with seatNumber ${seatNumber} not found.`);
-    }
-  } catch (error) {
-    console.error('Error updating seat:', error);
-  }
-}
 
 // Menghapus seat berdasarkan seatNumber
-async function deleteSeat(seatNumber) {
+exports.deleteSeat = async (req, res) => {
   try {
-    const seat = await Seat.findOne({
+    await Seat.destroy({
       where: {
-        seatNumber,
+        id: req.params.id,
       },
     });
-
-    if (seat) {
-      await seat.destroy();
-      console.log('Seat deleted.');
-    } else {
-      console.log(`Seat with seatNumber ${seatNumber} not found.`);
-    }
+    res.status(200).json({ msg: "seat deleted" });
   } catch (error) {
-    console.error('Error deleting seat:', error);
+    console.log(error);
   }
-}
-
-// Contoh penggunaan fungsi-fungsi controller
-createSeat(1, true, 'audi123');
-getAllSeats();
-getSeatsByAudiId('audi123');
-updateSeatStatus(1, false);
-deleteSeat(1);
+};

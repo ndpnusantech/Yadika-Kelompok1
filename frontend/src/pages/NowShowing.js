@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/layouts/Footer";
 import NavigationBar from "../components/layouts/NavigationBar";
 import CardMovie from "../components/ListMovie/CardMovie";
-import { dataMovie } from "../data/dataMovie";
+import axios from "axios";
 
 const NowShowing = () => {
   const backgroundStyle = {
@@ -15,6 +15,22 @@ const NowShowing = () => {
     backgroundPosition: "center",
     fontFamily: '"Montserrat",sans-serif',
     color: "white",
+  };
+
+  const [movies, setMovies] = useState([]);
+  console.log(movies);
+
+  useEffect(() => {
+    getMovie();
+  }, []);
+
+  const getMovie = async () => {
+    try {
+      const response = await axios.get("http://localhost:4000/movies");
+      setMovies(response.data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -40,8 +56,12 @@ const NowShowing = () => {
           </h6>
         </div>
         <div className="container d-flex justify-content-between flex-wrap mt-5">
-          {dataMovie.map((data) => (
-            <CardMovie id={data.id} poster={data.poster} title={data.title} />
+          {movies.map((data) => (
+            <CardMovie
+              id={data.id}
+              poster={data.poster_url}
+              title={data.title}
+            />
           ))}
         </div>
       </center>

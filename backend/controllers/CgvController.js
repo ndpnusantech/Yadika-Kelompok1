@@ -1,6 +1,6 @@
 const db = require("../helper/relation");
 
-const { Cgv, Movie } = db;
+const { Cgv, Movie, Audi } = db;
 
 exports.createCgv = async (req, res) => {
   try {
@@ -15,7 +15,7 @@ exports.createCgv = async (req, res) => {
 exports.getCgv = async (req, res) => {
   try {
     const response = await Cgv.findAll();
-    res.status(200).json({ data: response });
+    res.status(200).json(response);
   } catch (error) {
     console.log(error);
   }
@@ -27,7 +27,7 @@ exports.getCgvById = async (req, res) => {
       where: {
         id: req.params.id,
       },
-      include: [{ model: Movie }],
+      include: [{ model: Movie }, { model: Audi }],
     });
     res.status(200).json(response);
   } catch (error) {
