@@ -3,6 +3,7 @@ const bcrypt = require("bcrypt");
 const db = require("../helper/relation");
 
 const { User } = db;
+
 exports.getUsers = async (req, res) => {
   try {
     const users = await User.findAll({

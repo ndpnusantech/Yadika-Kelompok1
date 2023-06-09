@@ -9,7 +9,7 @@ const CityRoute = require("./routers/CityRoute.js");
 const CgvRoute = require("./routers/CgvRoute.js");
 const AudiRoute = require("./routers/Audi.js");
 const SeatRoute = require("./routers/SeatRoute.js");
-const TicketRoute = require("./routers/TicketRoute.js");
+const TicketRoute = require("./routers/Ticket.js");
 
 dotenv.config();
 
@@ -28,7 +28,7 @@ app.use(CityRoute);
 app.use(CgvRoute);
 app.use(AudiRoute);
 app.use(SeatRoute);
-app.use(UserRoute);
+// app.use(UserRoute);
 app.use(TicketRoute);
 
 // store.sync();
