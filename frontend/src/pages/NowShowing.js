@@ -18,7 +18,6 @@ const NowShowing = () => {
   };
 
   const [movies, setMovies] = useState([]);
-  console.log(movies);
 
   useEffect(() => {
     getMovie();
@@ -56,13 +55,18 @@ const NowShowing = () => {
           </h6>
         </div>
         <div className="container d-flex justify-content-between flex-wrap mt-5">
-          {movies.map((data) => (
-            <CardMovie
-              id={data.id}
-              poster={data.poster_url}
-              title={data.title}
-            />
-          ))}
+          {movies.map((data) => {
+            return (
+              data.is_show === true && (
+                <CardMovie
+                  id={data.id}
+                  poster={data.poster_url}
+                  title={data.title}
+                  price={data.normal_price}
+                />
+              )
+            );
+          })}
         </div>
       </center>
       <Footer />
