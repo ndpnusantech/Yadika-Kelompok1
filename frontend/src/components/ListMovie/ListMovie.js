@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -10,10 +10,25 @@ import "./listMovie.css";
 
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
-import { dataMovie } from "../../data/dataMovie";
 import CardMovie from "./CardMovie";
+import axios from "axios";
 
 const ListMovie = (props) => {
+  const [movies, setMovies] = useState([]);
+  console.log(movies);
+
+  useEffect(() => {
+    getMovie();
+  }, []);
+
+  const getMovie = async () => {
+    try {
+      const response = await axios.get("http://localhost:4000/movies");
+      setMovies(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <h2
@@ -36,9 +51,14 @@ const ListMovie = (props) => {
         slidesPerView={3}
         className="list-movie text-white"
       >
-        {dataMovie.map((data) => (
+        {movies.map((data) => (
           <SwiperSlide id={data.id}>
-            <CardMovie id={data.id} poster={data.poster} title={data.title} />
+            <CardMovie
+              id={data.id}
+              poster={data.poster_url}
+              title={data.title}
+              price={data.normal_price}
+            />
           </SwiperSlide>
         ))}
       </Swiper>

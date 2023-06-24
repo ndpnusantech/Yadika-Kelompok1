@@ -15,7 +15,7 @@ exports.getMovie = async (req, res) => {
 exports.getMovieById = async (req, res) => {
   try {
     const response = await Movie.findOne({
-      where: req.body.id,
+      where: { id: req.params.id },
       include: [{ model: Cgv }],
     });
     res.status(200).json(response);

@@ -1,10 +1,12 @@
-import "./buttons.css"
+import "./buttons.css";
 import React from "react";
 
-const DeleteBtn = () => {
-    return(
-        <button className="DeleteBtn">Delete</button>
-    )
-}
+const DeleteBtn = (props) => {
+  return (
+    <button className="DeleteBtn" onClick={() => props.onClick}>
+      Delete
+    </button>
+  );
+};
 
-export default DeleteBtn
+export default DeleteBtn;

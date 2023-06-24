@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import EditBtn from "../buttons/EditBtn";
-import DeleteBtn from "../buttons/DeleteBtn";
 import { AiOutlineSearch } from "react-icons/ai";
 import {
   WrapTable,
@@ -21,10 +21,29 @@ import "./style.css";
 import AddMovie from "../buttons/AddMovie";
 import BtnFilter from "../buttons/BtnFilter";
 
-// Tabs
-
 function TableList() {
-  // input type number tiket
+  // interact with api
+  const [movies, setMovies] = useState([]);
+  useEffect(() => {
+    getMovie();
+  }, []);
+
+  const getMovie = async () => {
+    try {
+      const movie = await axios.get("http://localhost:4000/movies");
+      setMovies(movie.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const deleteMovie = async (id) => {
+    try {
+      await axios.delete(`http://localhost:4000/movies/${id}`);
+      getMovie();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   // style option
   return (
@@ -53,70 +72,39 @@ function TableList() {
             <Th>Id film</Th>
             <Th>Nama film</Th>
             <Th>Poster film</Th>
-            <Th>Location</Th>
+            <Th>Status Show</Th>
             <Th>Durasi film</Th>
             <Th>Harga tiket</Th>
             <Th>Stok</Th>
             <Th>action</Th>
             <Th>Detail film</Th>
           </Tr>
-          <Tr>
-            <Td>1</Td>
-            <Td>201</Td>
-            <Td>Ant-man and the Wasp : Quantumania </Td>
-            <Td>
-              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
-            </Td>
-            <Td>Bandung</Td>
-            <Td>2 jam 4 menit</Td>
-            <Td>45.000</Td>
-            <Td>60</Td>
-            <Td>
-              <EditBtn />
-              <DeleteBtn />
-            </Td>
-            <Td>
-              <DetailFilm href="/detailFilm">detail</DetailFilm>
-            </Td>
-          </Tr>
-          <Tr>
-            <Td>1</Td>
-            <Td>201</Td>
-            <Td>Ant-man and the Wasp : Quantumania </Td>
-            <Td>
-              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
-            </Td>
-            <Td>Bandung</Td>
-            <Td>2 jam 4 menit</Td>
-            <Td>45.000</Td>
-            <Td>60</Td>
-            <Td>
-              <EditBtn />
-              <DeleteBtn />
-            </Td>
-            <Td>
-              <DetailFilm href="/detailFilm">detail</DetailFilm>
-            </Td>
-          </Tr>
-          <Tr>
-            <Td>1</Td>
-            <Td>201</Td>
-            <Td>Ant-man and the Wasp : Quantumania </Td>
-            <Td>
-              <PosterFilm src="./images/poster/ant-man.jpeg" alt="" />
-            </Td>
-            <Td>Bandung</Td>
-            <Td>2 jam 4 menit</Td>
-            <Td>45.000</Td>
-            <Td>60</Td>
-            <Td>
-              <EditBtn />
-              <DeleteBtn />
-            </Td>
-            <Td>
-              <DetailFilm href="/detailFilm">detail</DetailFilm>
-            </Td>
-          </Tr>
+          {movies.map((data, index) => (
+            <Tr>
+              <Td>{index}</Td>
+              <Td>{data.uuid}</Td>
+              <Td>{data.title}</Td>
+              <Td>
+                <PosterFilm src={data.poster_url} alt="" />
+              </Td>
+              <Td>{data.is_show ? "Now Showing" : "Up Coming"}</Td>
+              <Td>{data.duration}</Td>
+              <Td>{`${data.normal_price}.000`}</Td>
+              <Td>{data.stok_ticket}</Td>
+              <Td>
+                <EditBtn />
+                <button
+                  className="DeleteBtn"
+                  onClick={() => deleteMovie(data.id)}
+                >
+                  Delete
+                </button>
+              </Td>
+              <Td>
+                <DetailFilm href="/detailFilm">detail</DetailFilm>
+              </Td>
+            </Tr>
+          ))}
         </TableOrder>
       </WrapTabelOrder>
     </WrapTable>
