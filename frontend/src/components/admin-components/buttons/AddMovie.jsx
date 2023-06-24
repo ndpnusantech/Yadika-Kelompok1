@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import { InputNumber } from "../table/TableListElements";
 import TabComponent from "../tabs/Tab";
+import axios from "axios";
+import { useQuery } from "react-query";
 const AddMovie = () => {
   const [showAdd, setShowAdd] = useState(false);
 
@@ -27,6 +29,31 @@ const AddMovie = () => {
     const newCount = Number(e.target.count);
     setCount((prevCount) => newCount);
   }
+
+  // get API
+
+  const getCity = useQuery("city", async () => {
+    const axiosData = await axios
+      .get("http://localhost:4000/city")
+      .then((res) => {
+        return res;
+      });
+    return axiosData;
+  });
+
+  const [idCity, setIdCity] = useState(1);
+
+  const getCgv = useQuery(["city", idCity], async () => {
+    const axiosData = await axios
+      .get(`http://localhost:4000/city/${idCity}`)
+      .then((res) => {
+        return res;
+      });
+    return axiosData;
+  });
+
+  console.log(getCgv?.data?.data);
+
   return (
     <div>
       <button
@@ -170,6 +197,34 @@ const AddMovie = () => {
                 </table>
 
                 <table>
+                  <tr>
+                    <td>City</td>
+                    <td>:</td>
+                    <td>
+                      <select
+                        name=""
+                        id=""
+                        onChange={(e) => setIdCity(e.target.value)}
+                      >
+                        {getCity?.data?.data.map((data) => (
+                          <option value={data.id}>{data.city}</option>
+                        ))}
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Cgv</td>
+                    <td>:</td>
+                    <td>
+                      <select name="" id="">
+                        <option value="">-- Pilih --</option>
+                        {getCgv?.data?.data?.Cgvs?.map((data) => {
+                          console.log(data.cgv);
+                          return <option value={data.id}>{data.cgv}</option>;
+                        })}
+                      </select>
+                    </td>
+                  </tr>
                   <tr>
                     <td>Is Show ?</td>
                     <td>:</td>
