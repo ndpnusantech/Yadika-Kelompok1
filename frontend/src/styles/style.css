@@ -61,3 +61,9 @@ a:hover {
 .table-payment tr td {
   font-size: 14px;
 }
+
+.add-movie input {
+  border-radius: 5px;
+  padding: 3px;
+  border: 1px grey solid;
+}
