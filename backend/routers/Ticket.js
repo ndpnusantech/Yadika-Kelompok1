@@ -1,12 +1,12 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const TicketController = require('../controllers/TicketController');
+const TicketController = require("../controllers/TicketController");
 
 // Endpoint untuk membuat tiket baru
-router.post('/tickets', TicketController.createTicket);
+router.post("/tickets", TicketController.createTicket);
 
 // Endpoint untuk mengambil tiket berdasarkan ID
-router.get('/tickets/:ticketId', TicketController.getTicketById);
+router.get("/tickets/:id", TicketController.getTicketById);
 
 // Endpoint lainnya untuk memanipulasi dan mengambil data tiket
 

@@ -40,11 +40,6 @@ const CardHistory = () => {
             <td>A</td>
           </tr>
           <tr>
-            <td>Row</td>
-            <td>:</td>
-            <td>3</td>
-          </tr>
-          <tr>
             <td>Status Transaksi</td>
             <td>:</td>
             <td>{localStorage.getItem("status")}</td>

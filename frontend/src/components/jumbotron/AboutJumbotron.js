@@ -9,6 +9,7 @@ const AboutJumbotron = () => {
   const [poster, setPoster] = useState();
   const [bgPoster, setBgPoster] = useState();
   const { id } = useParams();
+  console.log(bgPoster);
   // styling
   const styleContent = {
     height: "100vh",
@@ -37,7 +38,7 @@ const AboutJumbotron = () => {
       setTitle(movie.data.title);
       setSinopsis(movie.data.sinopsis);
       setPoster(movie.data.poster_url);
-      setBgPoster(movie.data.bgPoster_url);
+      setBgPoster(movie.data.bg_poster_url);
     } catch (error) {
       console.log(error);
     }
