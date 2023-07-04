@@ -22,7 +22,7 @@ import Orders from "./pages/admin-pages/Orders";
 import LoginAdmin from "./pages/admin-pages/LoginAdmin";
 import UpComing from "./pages/UpComing";
 
-const app = () => {
+const App = () => {
   return (
     <section>
       <BrowserRouter>
@@ -30,7 +30,7 @@ const app = () => {
         <Routes>
           {/* User */}
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about/:id" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/audi" element={<Audi />} />
@@ -52,4 +52,4 @@ const app = () => {
   );
 };
 
-export default app;
+export default App;
