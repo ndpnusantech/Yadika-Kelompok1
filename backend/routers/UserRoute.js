@@ -8,11 +8,13 @@ const {
   register,
   login,
   deleteUser,
+  logout
 } = require("../controllers/UserController");
 
 router.get("/users", veryfyToken, getUsers);
 router.post("/users", register);
 router.post("/login", login);
+router.delete("/logout", logout);
 router.get("/token", refreshToken);
 router.delete("/users/:id", deleteUser);
 

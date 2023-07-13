@@ -298,7 +298,7 @@ exports.updateMovie = async (req, res) => {
         where: {
           id: movie.id,
         },
-      }
+      } 
     );
 
     res.status(200).json({ msg: "Movie Updated" });
@@ -342,3 +342,5 @@ exports.deleteMovie = async (req, res) => {
     res.status(500).json({ msg: error.message });
   }
 };
+
+
