@@ -33,8 +33,7 @@ User.hasOne(History, { foreignKey: "userId" });
 History.belongsTo(User, { foreignKey: "userId" });
 
 // this relation for transaction and any
-User.hasOne(Transaction, { foreignKey: "userId" });
-Movie.hasOne(Transaction, { foreignKey: "movieId" });
-Audi.hasMany(Transaction);
+Movie.hasOne(Transaction, { foreignKey: "MovieId" });
+Transaction.belongsTo(Movie, {foreignKey: "MovieId"})
 
-module.exports = { City, Cgv, Movie, Seat, Audi, User, Ticket, History };
+module.exports = { City, Cgv, Movie, Seat, Audi, User, Ticket, History, Transaction };
