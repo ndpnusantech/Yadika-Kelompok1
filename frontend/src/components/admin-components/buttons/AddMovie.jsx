@@ -206,6 +206,7 @@ const AddMovie = () => {
                         id=""
                         onChange={(e) => setIdCity(e.target.value)}
                       >
+                        <option value="">-- Pilih --</option>
                         {getCity?.data?.data.map((data) => (
                           <option value={data.id}>{data.city}</option>
                         ))}

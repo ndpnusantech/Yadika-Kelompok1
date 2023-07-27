@@ -12,6 +12,7 @@ const SeatRoute = require("./routers/SeatRoute.js");
 const TicketRoute = require("./routers/Ticket.js");
 const UserRoute = require("./routers/UserRoute.js");
 const HistoryRoute = require("./routers/HistoryRoute.js");
+const TransactionRoute = require("./routers/Transaction.js");
 
 dotenv.config();            
 
@@ -33,6 +34,7 @@ app.use(SeatRoute);
 app.use(UserRoute);
 app.use(TicketRoute);
 app.use(HistoryRoute);
+app.use(TransactionRoute);
 
 // store.sync();
 
